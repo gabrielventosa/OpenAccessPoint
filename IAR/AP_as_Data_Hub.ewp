@@ -2167,6 +2167,9 @@
         <name>Access Point</name>
         <file>
           <name>$PROJ_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</name>
+          <excluded>
+            <configuration>CC1110-End Device</configuration>
+          </excluded>
         </file>
       </group>
       <group>
@@ -2179,7 +2182,7 @@
           </excluded>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\..\..\Applications\main_manyEDs_autoack.c</name>
+          <name>$PROJ_DIR$\..\Applications\main_manyEDs_autoack.c</name>
           <excluded>
             <configuration>CC1110-Access Point</configuration>
           </excluded>
