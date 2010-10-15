@@ -64,7 +64,7 @@
  * characters of length NET_ADDR_SIZE (found in nwk_types.h). The quotes (") are
  * necessary below unless the spaces are removed.
  */
--DTHIS_DEVICE_ADDRESS="{0x78, 0x56, 0x34, 0x12}"
+-DTHIS_DEVICE_ADDRESS="{0x78, 0x56, 0x34, 0x10}"
 
 /* device type */
 -DACCESS_POINT

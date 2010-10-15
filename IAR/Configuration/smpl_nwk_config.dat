@@ -50,7 +50,8 @@
 -DMAX_NWK_PAYLOAD=9
 
 /* Maximum size of application payload. */
--DMAX_APP_PAYLOAD=10
+-DMAX_APP_PAYLOAD=32
+-DSIMPLICITI_MAX_PAYLOAD_LENGTH=32
 
 /* default Link token */
 -DDEFAULT_LINK_TOKEN=0x01020304
@@ -59,7 +60,7 @@
 -DDEFAULT_JOIN_TOKEN=0x05060708
 
 /* define Frequency Agility as active for this build */
--DFREQUENCY_AGILITY
+/*-DFREQUENCY_AGILITY
 
 /* Remove 'x' corruption to enable application autoacknowledge support. Requires extended API as well */
 -DAPP_AUTO_ACK

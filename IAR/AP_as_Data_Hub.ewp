@@ -2171,6 +2171,12 @@
             <configuration>CC1110-End Device</configuration>
           </excluded>
         </file>
+        <file>
+          <name>$PROJ_DIR$\..\Applications\rfsimpliciti.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\Applications\simpliciti.h</name>
+        </file>
       </group>
       <group>
         <name>End Device</name>

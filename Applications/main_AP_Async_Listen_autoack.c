@@ -45,6 +45,9 @@
 
 #include "app_remap_led.h"
 
+#include "simpliciti.h"
+
+
 #ifndef APP_AUTO_ACK
 #error ERROR: Must define the macro APP_AUTO_ACK for this application.
 #endif
@@ -111,9 +114,11 @@ static uint8_t sCB(linkID_t);
 /* received message handler */
 static void processMessage(linkID_t, uint8_t *, uint8_t);
 
+#ifdef FREQUENCY_AGILITY
 /* Frequency Agility helper functions */
 static void    checkChangeChannel(void);
 static void    changeChannel(void);
+#endif
 
 /* work loop semaphores */
 static volatile uint8_t sPeerFrameSem = 0;
@@ -139,9 +144,10 @@ static volatile uint8_t sBlinky = 0;
 void main (void)
 {
   bspIState_t intState;
-
+#ifdef FREQUENCY_AGILITY
   memset(sSample, 0x0, sizeof(sSample));
-  
+#endif  /* FREQUENCY_AGILITY */  
+ 
   BSP_Init();
 
   /* If an on-the-fly device address is generated it must be done before the
@@ -220,6 +226,10 @@ void main (void)
         }
       }
     }
+    
+    //Frequency Agility functions.
+    #ifdef FREQUENCY_AGILITY
+
     if (BSP_BUTTON1())
     {
       SPIN_ABOUT_A_QUARTER_SECOND;  /* debounce */
@@ -229,6 +239,9 @@ void main (void)
     {
       checkChangeChannel();
     }
+    #endif
+    
+    
     BSP_ENTER_CRITICAL_SECTION(intState);
     if (sBlinky)
     {
@@ -278,17 +291,30 @@ static uint8_t sCB(linkID_t lid)
 
 static void processMessage(linkID_t lid, uint8_t *msg, uint8_t len)
 {
+  uint8_t i;
+  
   /* do something useful */
   if (len)
   {
+    memcpy(simpliciti_data, msg, len);
+    simpliciti_sync_decode_ed_cmd_callback();
+    
+    // Get reply data and send out reply packet burst (19 bytes each)
+    for (i=0; i<simpliciti_reply_count; i++)
+	{
+	    NWK_DELAY(10);
+            simpliciti_sync_get_data_callback(i);
+            SMPL_SendOpt(lid, simpliciti_data, simpliciti_send_data_length, SMPL_TXOPTION_NONE);
+	}
+    
     toggleLED(*msg);
   }
   return;
 }
 
+#ifdef FREQUENCY_AGILITY
 static void changeChannel(void)
 {
-#ifdef FREQUENCY_AGILITY
   freqEntry_t freq;
 
   if (++sChannel >= NWK_FREQ_TBL_SIZE)
@@ -300,14 +326,14 @@ static void changeChannel(void)
   BSP_TURN_OFF_LED1();
   BSP_TURN_OFF_LED2();
   sBlinky = 1;
-#endif
   return;
 }
 
+#endif
+#ifdef FREQUENCY_AGILITY
 /* implement auto-channel-change policy here... */
 static void  checkChangeChannel(void)
 {
-#ifdef FREQUENCY_AGILITY
   int8_t dbm, inARow = 0;
 
   uint8_t i;
@@ -337,6 +363,7 @@ static void  checkChangeChannel(void)
       inARow = 0;
     }
   }
-#endif
+
   return;
 }
+#endif
