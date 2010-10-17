@@ -19,14 +19,14 @@
           
           
           
-        <Column0>277</Column0><Column1>36</Column1><Column2>27</Column2><Column3>1307676</Column3></ColumnWidths>
+        <Column0>339</Column0><Column1>36</Column1><Column2>27</Column2><Column3>1307676</Column3></ColumnWidths>
       </Workspace>
       <Disassembly>
         
         
         
       <MixedMode>1</MixedMode><CodeCovShow>0</CodeCovShow><InstrProfShow>0</InstrProfShow></Disassembly>
-    </Static>
+    <Find-in-Files><ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-in-Files><Watch><Format><struct_types/><watch_formats><Fmt><Key>{W}Watch-0:U1UCR</Key><Value>1</Value></Fmt></watch_formats></Format><Column0>100</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Watch></Static>
     <Windows>
       
       
@@ -45,7 +45,7 @@
             <Factory>Build</Factory>
             <Session/>
           </Tab>
-        </Tabs>
+        <Tab><Identity>TabID-27548-15514</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
         
       <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
         <Tabs>
@@ -69,20 +69,20 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd2></Windows>
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3><Tabs><Tab><Identity>TabID-13115-26170</Identity><TabName>Watch</TabName><Factory>Watch</Factory><Session><Expressions><Expression><Expression>simpliciti_data</Expression></Expression><Expression><Expression>uartRxBuffer</Expression></Expression><Expression><Expression>U1UCR</Expression></Expression></Expressions><TabId>0</TabId><Column0>100</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd3></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>8406</SelStart><SelEnd>8406</SelEnd></Tab><ActiveTab>0</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.c</Filename><XPos>0</XPos><YPos>550</YPos><SelStart>16155</SelStart><SelEnd>16155</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\Components\SimpliciTI\nwk_applications\nwk_join.h</Filename><XPos>0</XPos><YPos>61</YPos><SelStart>3548</SelStart><SelEnd>3548</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\Components\bsp\bsp.h</Filename><XPos>0</XPos><YPos>102</YPos><SelStart>5002</SelStart><SelEnd>5002</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\Components\simpliciti\nwk\nwk_api.c</Filename><XPos>0</XPos><YPos>358</YPos><SelStart>12440</SelStart><SelEnd>12440</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\Components\simpliciti\nwk\nwk_QMgmt.c</Filename><XPos>0</XPos><YPos>234</YPos><SelStart>7251</SelStart><SelEnd>7251</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\simpliciti.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>47</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\rfsimpliciti.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1575</SelStart><SelEnd>1577</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Configuration\smpl_nwk_config.dat</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>2942</SelStart><SelEnd>2942</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Configuration\Access_Point\smpl_config.dat</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>3871</SelStart><SelEnd>3871</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</Filename><XPos>0</XPos><YPos>129</YPos><SelStart>6827</SelStart><SelEnd>6827</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart.c</Filename><XPos>0</XPos><YPos>150</YPos><SelStart>7357</SelStart><SelEnd>7357</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart.h</Filename><XPos>0</XPos><YPos>6</YPos><SelStart>1817</SelStart><SelEnd>1817</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Archivos de programa\IAR Systems\Embedded Workbench 5.4\8051\inc\ioCC1110.h</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart_app.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>673</SelStart><SelEnd>673</SelEnd></Tab><ActiveTab>13</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart_app.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-00b1b028><key>iaridepm.enu1</key></Toolbar-00b1b028></Sizes></Row0><Row1><Sizes><Toolbar-03c35140><key>debuggergui.enu1</key></Toolbar-03c35140></Sizes></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>587</Bottom><Right>360</Right><x>-2</x><y>-2</y><xscreen>225</xscreen><yscreen>174</yscreen><sizeHorzCX>156250</sizeHorzCX><sizeHorzCY>211165</sizeHorzCY><sizeVertCX>251389</sizeVertCX><sizeVertCY>714806</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>587</Bottom><Right>305</Right><x>-2</x><y>-2</y><xscreen>225</xscreen><yscreen>174</yscreen><sizeHorzCX>156250</sizeHorzCX><sizeHorzCY>211165</sizeHorzCY><sizeVertCX>213194</sizeVertCX><sizeVertCY>714806</sizeVertCY></Rect></Wnd2></Sizes></Row0></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>169</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>171</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>207524</sizeHorzCY><sizeVertCX>156250</sizeVertCX><sizeVertCY>211165</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-00b1b028><key>iaridepm.enu1</key></Toolbar-00b1b028></Sizes></Row0><Row1><Sizes><Toolbar-04bc5660><key>debuggergui.enu1</key></Toolbar-04bc5660></Sizes></Row1></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>639</Bottom><Right>422</Right><x>-2</x><y>-2</y><xscreen>129</xscreen><yscreen>121</yscreen><sizeHorzCX>89583</sizeHorzCX><sizeHorzCY>146845</sizeHorzCY><sizeVertCX>294444</sizeVertCX><sizeVertCY>777913</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>639</Bottom><Right>174</Right><x>-2</x><y>-2</y><xscreen>129</xscreen><yscreen>121</yscreen><sizeHorzCX>89583</sizeHorzCX><sizeHorzCY>146845</sizeHorzCY><sizeVertCX>122222</sizeVertCX><sizeVertCY>777913</sizeVertCY></Rect></Wnd2></Sizes></Row0><Row1><Sizes><Wnd3><Rect><Top>-2</Top><Left>172</Left><Bottom>639</Bottom><Right>368</Right><x>172</x><y>-2</y><xscreen>115</xscreen><yscreen>140</yscreen><sizeHorzCX>79861</sizeHorzCX><sizeHorzCY>169903</sizeHorzCY><sizeVertCX>136111</sizeVertCX><sizeVertCY>777913</sizeVertCY></Rect></Wnd3></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>117</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>119</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>144417</sizeHorzCY><sizeVertCX>89583</sizeVertCX><sizeVertCY>146845</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Project>
 

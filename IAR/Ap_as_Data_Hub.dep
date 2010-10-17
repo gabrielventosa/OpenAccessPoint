@@ -2,289 +2,149 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>2303120806</fileChecksum>
+  <fileChecksum>696302860</fileChecksum>
   <configuration>
     <name>CC1110-Access Point</name>
     <outputs>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_join.pbi</file>
-      <file>$PROJ_DIR$\..\Applications\main_manyEDs_autoack.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_api.c</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_ioctl.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\radios\common\mrfi_f1f2.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\main_AP_Async_Listen_autoack.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\List\Ap_as_Data_Hub.map</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Exe\Ap_as_Data_Hub.d51</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk.r51</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_globals.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_generic_buttons.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi.c</file>
       <file>$PROJ_DIR$\..\..\..\Applications\main_AP_Async_Listen_autoack.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_freq.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_link.c</file>
+      <file>$PROJ_DIR$\Configuration\Access_Point\smpl_config.dat</file>
+      <file>$PROJ_DIR$\Configuration\End_Device\smpl_config.dat</file>
+      <file>$PROJ_DIR$\Configuration\Range_Extender\smpl_config.dat</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nlxd-1e16x01.r51</file>
+      <file>$PROJ_DIR$\..\Applications\uart.c</file>
+      <file>$PROJ_DIR$\..\Applications\uart.h</file>
+      <file>$PROJ_DIR$\..\Applications\uart_app.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_ping.pbi</file>
+      <file>$PROJ_DIR$\..\Applications\uart_app.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_api.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_generic_buttons.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_external\mrfi_board_defs.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\uart_app.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_frame.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_types.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_freq.r51</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\List\Ap_as_Data_Hub.map</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\Ap_as_Data_Hub.pbd</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_led_defs.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_mgmt.r51</file>
+      <file>$PROJ_DIR$\..\Applications\simpliciti.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_api.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_leds.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\bsp.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.c</file>
+      <file>$PROJ_DIR$\..\..\..\Components\mrfi\radios\common\mrfi_f1f2.c</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_link.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk.c</file>
+      <file>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi_defs.h</file>
+      <file>$PROJ_DIR$\..\Applications\components\radio\ccxx10\ioCCxx10_bitdef.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_QMgmt.pbi</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\main_AP_Async_Listen_autoack.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_drivers.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_frame.pbi</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\main_manyEDs_autoack.r51</file>
+      <file>$PROJ_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</file>
+      <file>$PROJ_DIR$\..\Applications\rfsimpliciti.c</file>
+      <file>$PROJ_DIR$\..\..\..\Components\mrfi\radios\common\mrfi_f1f2.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\mcus\bsp_8051_defs.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdbool.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_globals.pbi</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\rfsimpliciti.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_buttons.c</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\bsp.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_security.r51</file>
+      <file>$PROJ_DIR$\..\Applications\components\common\hal_defs.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_security.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_frame.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\rfsimpliciti.r51</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_join.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_globals.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_button_defs.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_ping.r51</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\uart.pbi</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_frame.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_app.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_join.pbi</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\uart.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_QMgmt.c</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_generic_leds.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\bsp_buttons.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\mrfi\radios\family2\mrfi_radio.c</file>
       <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_QMgmt.r51</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_link.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Applications\app_remap_led.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_api.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\bsp_macros.h</file>
+      <file>$PROJ_DIR$\..\Applications\components\common\cc8051\hal_cc8051.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\bsp.pbi</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Exe\Ap_as_Data_Hub.d51</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC1110.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_ioctl.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\bsp.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_board.c</file>
+      <file>$PROJ_DIR$\Configuration\smpl_nwk_config.dat</file>
+      <file>$PROJ_DIR$\..\Applications\app_remap_led.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\main_AP_Async_Listen_autoack.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\mrfi.pbi</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\main_manyEDs_autoack.pbi</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\uart_app.r51</file>
+      <file>$TOOLKIT_DIR$\config\lnk51ew_cc1110.xcl</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\bsp_leds.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\mrfi.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_api.c</file>
+      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_driver_defs.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_globals.c</file>
+      <file>$PROJ_DIR$\..\..\..\Applications\main_manyEDs.c</file>
+      <file>$PROJ_DIR$\..\Applications\main_manyEDs_autoack.c</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_link.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\mrfi\smartrf\CC1110\smartrf_CC1110.h</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_ioctl.r51</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.c</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_mgmt.pbi</file>
+      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk.pbi</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_security.h</file>
+      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.h</file>
       <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_security.c</file>
       <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_board_defs.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\bsp_leds.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_ping.pbi</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_api.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\bsp_buttons.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_link.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi_defs.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_external\mrfi_board_defs.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_globals.r51</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC1110.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_app.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_drivers.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\radios\family2\mrfi_radio.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_globals.c</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_api.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_button_defs.h</file>
-      <file>$PROJ_DIR$\..\..\..\Applications\main_manyEDs.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_link.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_link.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_frame.c</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\main_AP_Async_Listen_autoack.r51</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\main_manyEDs_autoack.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_driver_defs.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_freq.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_security.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\radios\common\mrfi_f1f2.c</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_frame.pbi</file>
-      <file>$PROJ_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\bsp.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stdbool.h</file>
       <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_globals.h</file>
-      <file>$PROJ_DIR$\..\Applications\app_remap_led.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.c</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\mrfi.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_QMgmt.r51</file>
-      <file>$PROJ_DIR$\Configuration\Access_Point\smpl_config.dat</file>
-      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\bsp.c</file>
-      <file>$PROJ_DIR$\..\..\..\Applications\app_remap_led.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_api.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk.c</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk.pbi</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_mgmt.r51</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\main_manyEDs_autoack.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_leds.c</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_QMgmt.pbi</file>
-      <file>$PROJ_DIR$\..\Applications\rfsimpliciti.c</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\mrfi.r51</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_freq.pbi</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_join.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\bsp_macros.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_frame.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_frame.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\bsp.pbi</file>
-      <file>$PROJ_DIR$\Configuration\Range_Extender\smpl_config.dat</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_mgmt.pbi</file>
-      <file>$TOOLKIT_DIR$\config\lnk51ew_cc1110.xcl</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\Ap_as_Data_Hub.pbd</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_security.r51</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_security.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_types.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.c</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\rfsimpliciti.pbi</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_link.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\smartrf\CC1110\smartrf_CC1110.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_generic_leds.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\bsp.r51</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_ping.r51</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\rfsimpliciti.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\mcus\bsp_8051_defs.h</file>
-      <file>$PROJ_DIR$\CC1110-Access_Point\Obj\nwk_ioctl.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_led_defs.h</file>
-      <file>$PROJ_DIR$\..\Applications\simpliciti.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.h</file>
       <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_QMgmt.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_buttons.c</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nlxd-1e16x01.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_board.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_QMgmt.c</file>
-      <file>$PROJ_DIR$\Configuration\smpl_nwk_config.dat</file>
+      <file>$PROJ_DIR$\..\Applications\components\common\hal_types.h</file>
     </outputs>
-    <file>
-      <name>$PROJ_DIR$\..\Applications\main_manyEDs_autoack.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 39</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 64</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 46 17 93 27 71 12 24 82 60 18 95 89 22 33 11 50</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 46 17 93 71 12 24 82 60 18 95 89 22 33 11 50</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_api.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 20</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 60 73 15 28 54 86 35 53 47 42 97 49</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 60 73 15 28 54 86 35 53 47 42 97 49</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\CC1110-Access_Point\Exe\Ap_as_Data_Hub.d51</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 7</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 77 90 38 68 9 55 20 72 41 26 3 70 85 63 91 79 92 101</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 68</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 52</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 24 46 17 93 27 71 30 99 57 12 4 88 25 43</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 24 46 17 93 71 30 99 57 12 4 88 25 43</file>
-        </tool>
-      </inputs>
-    </file>
     <file>
       <name>$PROJ_DIR$\..\..\..\Applications\main_AP_Async_Listen_autoack.c</name>
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 38</file>
+          <file> 91</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 5</file>
+          <file> 37</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 18 95 89 22 33 11 82 60 73 15 59</file>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 97 23 70 71 62 15 19 27 18 73 76</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 18 95 89 22 33 11 82 60 73 15 59</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_security.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 79</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 80</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 12 46 17 93 27 71 24 82 42 73 15</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 12 46 17 93 71 24 82 42 73 15</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 70</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 0</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 60 73 15 35 47 49 54 42 53</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 60 73 15 35 47 49 54 42 53</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_globals.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 26</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 10</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 49</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 49</file>
+          <file> 78 26 87 114 44 80 79 34 97 23 70 71 62 15 19 27 18 73 76</file>
         </tool>
       </inputs>
     </file>
@@ -293,473 +153,7 @@
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 85</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 23</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 60 73 15 35 49 42</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 60 73 15 35 49 42</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_frame.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 72</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 44</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 73 15 28 54 86 35 53 47 42 97 98 49</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 73 15 28 54 86 35 53 47 42 97 98 49</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 38</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 5</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 18 95 89 22 33 11 82 60 73 15 50 96</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 18 95 89 22 33 11 82 60 73 15 50 96</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 91</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 19</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 73 15 86 49 60 54 42</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 73 15 86 49 60 54 42</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\bsp\bsp.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 90</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 74</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 46 17 93 27 71 40 102 29 18 95 89 22 33 11 65 100</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 46 17 93 71 40</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 9</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 62</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 73 15 28 54 86 35 53 47 42 97 49 98</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 73 15 28 54 86 35 53 47 42 97 49 98</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Applications\rfsimpliciti.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 92</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 84</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 96</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 96</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\CC1110-Access_Point\Obj\Ap_as_Data_Hub.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-          <file> 74 5 52 62 66 32 44 69 10 94 0 23 76 19 80 84</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 41</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 69</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 15 73 54 49 60 42</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 15 73 54 49 60 42</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 63</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 76</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 60 73 15 53 47 49 98</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 60 73 15 53 47 49 98</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 3</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 94</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 99 57 46 17 93 27 71 12 24 82 73 15 97 49 42 47</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99 57 46 17 93 71 12 24 82 73 15 97 49 42</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 8 7</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_QMgmt.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 55</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56 104 6 48 99 57 46 17 93 27 71 12 24 82 15 73 98 53</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 6 48 99 57 46 17 93 71 12 24 82 15 73 98 53</file>
-        </tool>
-      </inputs>
-    </file>
-  </configuration>
-  <configuration>
-    <name>CC1110-End Device</name>
-    <outputs>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\main_AP_Async_Listen_autoack.r51</file>
-      <file>$PROJ_DIR$\..\Applications\main_manyEDs_autoack.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_api.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\List\Ap_as_Data_Hub.map</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\radios\common\mrfi_f1f2.h</file>
-      <file>$PROJ_DIR$\Configuration\End_Device\smpl_config.dat</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_ioctl.pbi</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_ping.pbi</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_security.r51</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_join.r51</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_api.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_generic_buttons.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_ping.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_security.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_board_defs.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\bsp_leds.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\mrfi.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\bsp_buttons.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_link.r51</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_freq.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi_defs.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_external\mrfi_board_defs.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Exe\Ap_as_Data_Hub.d51</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC1110.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_app.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_drivers.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\radios\family2\mrfi_radio.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_globals.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_button_defs.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_link.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_link.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_globals.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_frame.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\main_AP_Async_Listen_autoack.pbi</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\Ap_as_Data_Hub.pbd</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_driver_defs.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_security.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\radios\common\mrfi_f1f2.c</file>
-      <file>$PROJ_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\bsp.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\bsp.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stdbool.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_globals.h</file>
-      <file>$PROJ_DIR$\..\Applications\app_remap_led.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.c</file>
-      <file>$PROJ_DIR$\..\..\..\Applications\main_manyEDs_autoack.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_mgmt.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\bsp.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_QMgmt.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_api.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_link.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_security.pbi</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\bsp.pbi</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_leds.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_frame.pbi</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\main_manyEDs_autoack.r51</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_frame.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\bsp_macros.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_globals.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_frame.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\mrfi.r51</file>
-      <file>$TOOLKIT_DIR$\config\lnk51ew_cc1110.xcl</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_ioctl.r51</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_join.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_types.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_mgmt.pbi</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_QMgmt.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.c</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\main_manyEDs_autoack.pbi</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_freq.pbi</file>
-      <file>$PROJ_DIR$\..\..\..\Components\mrfi\smartrf\CC1110\smartrf_CC1110.h</file>
-      <file>$PROJ_DIR$\CC1110-End_Device\Obj\nwk_api.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_generic_leds.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\mcus\bsp_8051_defs.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_led_defs.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\SimpliciTI\nwk\nwk_QMgmt.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\drivers\code\bsp_buttons.c</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nlxd-1e16x01.r51</file>
-      <file>$PROJ_DIR$\..\..\..\Components\bsp\boards\sfrccxx10\bsp_board.c</file>
-      <file>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_QMgmt.c</file>
-      <file>$PROJ_DIR$\Configuration\smpl_nwk_config.dat</file>
-    </outputs>
-    <file>
-      <name>$PROJ_DIR$\..\Applications\main_manyEDs_autoack.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 67</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 83</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 45 18 88 28 69 13 25 77 59 19 89 87 22 33 12 49</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45 18 88 69 13 25 77 59 19 89 87 22 33 12 49</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_api.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 86</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 11</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 59 71 15 29 54 81 34 53 46 41 90 48</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 59 71 15 29 54 81 34 53 46 41 90 48</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 72</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 20</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 25 45 18 88 28 69 31 92 55 13 4 85 26 42</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 25 45 18 88 69 31 92 55 13 4 85 26 42</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_security.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 9</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 62</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 92 55 13 45 18 88 28 69 25 77 41 71 15</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 92 55 13 45 18 88 69 25 77 41 71 15</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 10</file>
+          <file> 105</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -769,197 +163,20 @@
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 59 71 15 34 46 48 54 41 53</file>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 27 18 73 32 115 111</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 59 71 15 34 46 48 54 41 53</file>
+          <file> 78 26 87 114 44 80 79 34 19 27 18 73 32 115 111</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\CC1110-End_Device\Exe\Ap_as_Data_Hub.d51</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 3</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 73 44 67 72 56 58 86 68 24 70 74 10 23 52 16 9 94</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_globals.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 70</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 36</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 48</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 48</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_link.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 23</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 60</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 59 71 15 34 48 41</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 59 71 15 34 48 41</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_frame.c</name>
+      <name>$PROJ_DIR$\..\Applications\uart.c</name>
       <outputs>
         <tool>
           <name>ICC8051</name>
           <file> 68</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 71 15 29 54 81 34 53 46 41 90 91 48</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 71 15 29 54 81 34 53 46 41 90 91 48</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\CC1110-End_Device\Obj\Ap_as_Data_Hub.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-          <file> 63 38 83 20 64 80 11 66 84 36 7 75 60 79 8 62</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 0</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 38</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 19 89 87 22 33 12 77 59 71 15 49</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 19 89 87 22 33 12 77 59 71 15 49</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 16</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 8</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 71 15 81 48 59 54 41</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 71 15 81 48 59 54 41</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Applications\main_manyEDs_autoack.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 83</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\bsp\bsp.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 44</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 63</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 5 97 45 18 88 28 69 40 95 30 19 89 87 22 33 12 65 93</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45 18 88 69 40</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -969,80 +186,89 @@
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 71 15 29 54 81 34 53 46 41 90 48 91</file>
+          <file> 4 89 84 9</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 71 15 29 54 81 34 53 46 41 90 48 91</file>
+          <file> 84 9</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.c</name>
+      <name>$PROJ_DIR$\..\Applications\uart_app.c</name>
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 24</file>
+          <file> 95</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 84</file>
+          <file> 17</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 15 71 54 48 59 41</file>
+          <file> 4 89 84 9 12</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 15 71 54 48 59 41</file>
+          <file> 84 9 12</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.c</name>
+      <name>$PROJ_DIR$\CC1110-Access_Point\Obj\Ap_as_Data_Hub.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 82 37 93 110 36 14 39 1 47 85 67 75 109 11 56 48 64 17</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ping.c</name>
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 52</file>
+          <file> 63</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 79</file>
+          <file> 11</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 59 71 15 53 46 48 91</file>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 18 73 112 115 27 86 111</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 59 71 15 53 46 48 91</file>
+          <file> 78 26 87 114 44 80 79 34 19 18 73 112 115 27 86 111</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.c</name>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk.c</name>
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 74</file>
+          <file> 53</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 7</file>
+          <file> 110</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 5 97 92 55 45 18 88 28 69 13 25 77 71 15 90 48 41</file>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 18 73 66 86 112 32 13 104 111 54 115 116</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 92 55 45 18 88 69 13 25 77 71 15 90 48 41</file>
+          <file> 78 26 87 114 44 80 79 34 19 18 73 66 86 112 32 13 104 111 54 115 116</file>
         </tool>
       </inputs>
     </file>
@@ -1051,12 +277,35 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 27 3</file>
+          <file> 83 21</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_QMgmt.c</name>
+      <name>$PROJ_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 91</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 37</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 78 26 117 52 81 35 84 87 114 44 80 79 34 97 23 70 71 62 15 19 27 18 73 90 25 9 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 26 117 52 81 35 84 87 114 44 80 79 34 97 23 70 71 62 15 19 27 18 73 90 25 9 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Applications\rfsimpliciti.c</name>
       <outputs>
         <tool>
           <name>ICC8051</name>
@@ -1064,48 +313,311 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 80</file>
+          <file> 48</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 5 97 6 47 92 55 45 18 88 28 69 13 25 77 15 71 91 53</file>
+          <file> 4 89 25</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 6 47 92 55 45 18 88 69 13 25 77 15 71 91 53</file>
+          <file> 25</file>
         </tool>
       </inputs>
     </file>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\..\..\Applications\main_AP_Async_Listen_autoack.c</name>
-      <tool>ICC8051</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\..\..\Applications\main_AP_Async_Listen.c</name>
-      <tool>ICC8051</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\..\..\Applications\main_manyEDs.c</name>
-      <tool>ICC8051</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\..\..\Applications\main_manyEDs_autoack.c</name>
-      <tool>ICC8051</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\..\..\Applications\main_AP_RE.c</name>
-      <tool>ICC8051</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\..\..\Applications\main_ED_Sniffer.c</name>
-      <tool>ICC8051</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>[MULTI_TOOL]</name>
-      <tool>XLINK</tool>
-    </forcedrebuild>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\mrfi\mrfi.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 93</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 34 87 114 44 84 80 72 78 26 79 43 106 16 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 34 87 114 44 80 72 78 26 79 43 106 16 31</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\bsp\bsp.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 82</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 87 114 44 84 80 100 88 38 97 23 70 71 62 15 28 49</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87 114 44 80 100</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_join.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 59</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 27 18 73 32 104 115 86 111 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 26 87 114 44 80 79 34 19 27 18 73 32 104 115 86 111 13</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_frame.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 65</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 18 73 66 86 112 32 13 104 111 54 116 115</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 26 87 114 44 80 79 34 19 18 73 66 86 112 32 13 104 111 54 116 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_mgmt.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 24</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 109</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 27 18 73 13 104 115 116</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 26 87 114 44 80 79 34 19 27 18 73 13 104 115 116</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_QMgmt.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 74</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 2 45 78 26 87 114 44 84 80 79 34 19 73 18 116 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2 45 78 26 87 114 44 80 79 34 19 73 18 116 13</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\CC1110-Access_Point\Exe\Ap_as_Data_Hub.d51</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 21</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 96 29 91 98 53 74 77 65 20 61 107 59 105 24 63 51 58 68 95 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_ioctl.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 107</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 18 73 54 115 111 104</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 26 87 114 44 80 79 34 19 18 73 54 115 111</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_api.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 77</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 27 18 73 66 86 112 32 13 104 111 54 115</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 26 87 114 44 80 79 34 19 27 18 73 66 86 112 32 13 104 111 54 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk\nwk_globals.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 61</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 47</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 115</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 26 87 114 44 80 79 34 19 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Applications\main_manyEDs_autoack.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 40</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 94</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 87 114 44 84 80 79 34 19 27 97 23 70 71 62 15 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87 114 44 80 79 34 19 27 97 23 70 71 62 15 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_freq.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 78 26 87 114 44 84 80 79 34 19 73 18 86 115 27 111</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 26 87 114 44 80 79 34 19 73 18 86 115 27 111</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\Components\simpliciti\nwk_applications\nwk_security.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 51</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4 89 78 26 79 87 114 44 84 80 34 19 111 18 73</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 26 79 87 114 44 80 34 19 111 18 73</file>
+        </tool>
+      </inputs>
+    </file>
   </configuration>
 </project>
 

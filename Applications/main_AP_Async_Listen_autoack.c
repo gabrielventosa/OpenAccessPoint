@@ -34,6 +34,13 @@
   contact Texas Instruments Incorporated at www.TI.com.
 **************************************************************************************************/
 #include <string.h>
+
+#include "hal_types.h"
+#include <hal_defs.h>
+#include <hal_cc8051.h>
+#include <ioCCxx10_bitdef.h>
+
+#include <ioCC1110.h>
 #include "bsp.h"
 #include "mrfi.h"
 #include "bsp_leds.h"
@@ -46,6 +53,8 @@
 #include "app_remap_led.h"
 
 #include "simpliciti.h"
+#include "uart.h"
+#include "uart_app.h"
 
 
 #ifndef APP_AUTO_ACK
@@ -123,6 +132,8 @@ static void    changeChannel(void);
 /* work loop semaphores */
 static volatile uint8_t sPeerFrameSem = 0;
 static volatile uint8_t sJoinSem = 0;
+volatile unsigned char sUartCmd = 0;
+
 
 #ifdef FREQUENCY_AGILITY
 /*     ************** BEGIN interference detection support */
@@ -155,6 +166,18 @@ void main (void)
    * be used. If SMPL_Init() runs before this IOCTL is used the IOCTL call
    * will not take effect. One shot only. The IOCTL call below is conformal.
    */
+  
+  // Set system clock source to 26 Mhz XSOSC to support maximum transfer speed,
+  // ref. [clk]=>[clk_xosc.c]
+  /*
+  SLEEP &= ~SLEEP_OSC_PD;
+  while( !(SLEEP & SLEEP_XOSC_S) );
+  CLKCON = (CLKCON & ~(CLKCON_CLKSPD | CLKCON_OSC)) | CLKSPD_DIV_1;
+  while (CLKCON & CLKCON_OSC);
+  SLEEP |= SLEEP_OSC_PD;*/
+  
+  start_gps_at_uart(); //Initialize uart interface
+  
 #ifdef I_WANT_TO_CHANGE_DEFAULT_ROM_DEVICE_ADDRESS_PSEUDO_CODE
   {
     addr_t lAddr;
@@ -176,6 +199,8 @@ void main (void)
     toggleLED(1);
   }
 
+  uartStartRxForIsr(UART_PORT_GPS_AT); // Start reading commands on GPS AT UART
+  
   /* main work loop */
   while (1)
   {
@@ -227,6 +252,14 @@ void main (void)
       }
     }
     
+    if (sUartCmd)
+    {
+      memcpy(uartTxBuffer,uartRxBuffer,uartRxIndex);
+      uartStartTxForIsr(UART_PORT_GPS_AT);
+      sUartCmd--;
+    }
+    
+    
     //Frequency Agility functions.
     #ifdef FREQUENCY_AGILITY
 
@@ -241,7 +274,7 @@ void main (void)
     }
     #endif
     
-    
+    /*
     BSP_ENTER_CRITICAL_SECTION(intState);
     if (sBlinky)
     {
@@ -252,7 +285,7 @@ void main (void)
         toggleLED(2);
       }
     }
-    BSP_EXIT_CRITICAL_SECTION(intState);
+    BSP_EXIT_CRITICAL_SECTION(intState); */
   }
 
 }

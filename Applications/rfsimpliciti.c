@@ -55,7 +55,6 @@ void simpliciti_sync_get_data_callback(unsigned int index)
                   simpliciti_data[2] = 0x16;
                   simpliciti_data[3] = 0x2c;
                   simpliciti_data[4] = 0x07;
-
                   simpliciti_data[5] = 0xda;
                   simpliciti_data[6] = 0x0a;
                   simpliciti_data[7] = 0x0e;
