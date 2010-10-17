@@ -209,11 +209,11 @@
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 4 89 84 9 12</file>
+          <file> 4 89 84 78 26 9 12</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 84 9 12</file>
+          <file> 84 78 26 9 12</file>
         </tool>
       </inputs>
     </file>

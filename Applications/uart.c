@@ -3,9 +3,11 @@
 
 
 // Allocate buffer+index for UART RX/TX
-unsigned short __xdata uartRxBuffer[SIZE_OF_UART_RX_BUFFER];
-unsigned short __xdata uartTxBuffer[SIZE_OF_UART_TX_BUFFER];
-unsigned short __xdata uartRxIndex, uartTxIndex;
+unsigned char __xdata uartRxBuffer[SIZE_OF_UART_RX_BUFFER];
+unsigned char __xdata uartTxBuffer[SIZE_OF_UART_TX_BUFFER];
+unsigned short volatile __xdata uartRxIndex, uartTxIndex;
+unsigned short volatile __xdata uartTxLength;
+
 
 void uartMapPort(unsigned char uartPortAlt, unsigned char uartNum);
 void uartInitBitrate(unsigned char uartBaudM, unsigned char uartBaudE);
@@ -20,6 +22,9 @@ _Pragma("vector=0x13") __near_func __interrupt void UART0_RX_ISR(void);
 _Pragma("vector=0x1B") __near_func __interrupt void UART1_RX_ISR(void);
 
 UART_PROT_CONFIG __xdata uartProtConfig;
+
+
+extern void toggleLED(unsigned char);
 
 // C language code:
 // This function maps/connects the UART to the desired SoC I/O port.
@@ -198,8 +203,9 @@ _Pragma("vector=0x3B") __near_func __interrupt void UART0_TX_ISR(void){
 
 
 _Pragma("vector=0x73") __near_func __interrupt void UART1_TX_ISR(void){
+    toggleLED(1);
     UTX1IF = 0;
-    if (uartTxIndex >= SIZE_OF_UART_TX_BUFFER) {
+    if (uartTxIndex >= uartTxLength) {
         uartTxIndex = 0; IEN2 &= ~0x08; return;
     }
     U1DBUF = uartTxBuffer[uartTxIndex++];
@@ -246,9 +252,10 @@ _Pragma("vector=0x13") __near_func __interrupt void UART0_RX_ISR(void){
 
 _Pragma("vector=0x1B") __near_func __interrupt void UART1_RX_ISR(void){
      URX1IF = 0;
-     if(U1DBUF==0x0d)   sUartCmd++;
-     uartRxBuffer[uartRxIndex++] = U1DBUF;
-     if (uartRxIndex >= SIZE_OF_UART_RX_BUFFER) {
-        uartRxIndex = 0; IEN0 &= ~0x08;
-      }
+     toggleLED(1);
+     if((U1DBUF==0x0d) ||(uartRxIndex >= SIZE_OF_UART_RX_BUFFER)){
+       sUartCmd++;
+       IEN0 &= ~0x08;
+     }else uartRxBuffer[uartRxIndex++] = U1DBUF;
+    
 }

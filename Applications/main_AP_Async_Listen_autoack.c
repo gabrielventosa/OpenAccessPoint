@@ -133,7 +133,8 @@ static void    changeChannel(void);
 static volatile uint8_t sPeerFrameSem = 0;
 static volatile uint8_t sJoinSem = 0;
 volatile unsigned char sUartCmd = 0;
-
+volatile unsigned char Lock_Flag = 1;
+volatile unsigned char Panic_Flag = 0;
 
 #ifdef FREQUENCY_AGILITY
 /*     ************** BEGIN interference detection support */
@@ -254,9 +255,16 @@ void main (void)
     
     if (sUartCmd)
     {
-      memcpy(uartTxBuffer,uartRxBuffer,uartRxIndex);
-      uartStartTxForIsr(UART_PORT_GPS_AT);
+
+      if ((uartRxIndex < SIZE_OF_UART_RX_BUFFER) && uartRxIndex >0){      //Command detected instead of an overflow
+      memcpy(uartCommand,uartRxBuffer,uartRxIndex);  //Copy the Rx Buffer to Command buffer
+      uartCommandSize = uartRxIndex;
+      uart_decode_cmd_callback();
+      }
+      uartRxIndex=0;
       sUartCmd--;
+      memset(uartRxBuffer,0x0,SIZE_OF_UART_RX_BUFFER);
+      uartStartRxForIsr(UART_PORT_GPS_AT);      
     }
     
     

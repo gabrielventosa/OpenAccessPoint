@@ -2,7 +2,7 @@
 #                                                                              #
 #      IAR Universal Linker V4.61T/W32                                         #
 #                                                                              #
-#           Link time     =  16/Oct/2010  19:14:40                             #
+#           Link time     =  17/Oct/2010  00:17:39                             #
 #           Target CPU    =  x51                                               #
 #           List file     =  I:\SimpliciTI-IAR-1.1.1\Projects\OpenAccessPoint\ #
 #                            IAR\CC1110-Access_Point\List\Ap_as_Data_Hub.map   #
@@ -278,29 +278,29 @@ SFR_AN
            P1DIR                   000000FE 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000004AE - 000004DC (0x2f bytes), align: 0
+  Relative segment, address: CODE 000004F9 - 00000527 (0x2f bytes), align: 0
   Segment part 12.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           BSP_Init                000004AE        main (main_AP_Async_Listen_autoack)
+           BSP_Init                000004F9        main (main_AP_Async_Listen_autoack)
                calls direct
                XSTACK = 00000000 ( 00000002 )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000004DD - 00000500 (0x24 bytes), align: 0
+  Relative segment, address: CODE 00000528 - 0000054B (0x24 bytes), align: 0
   Segment part 14.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           BSP_Delay               000004DD        MRFI_ReplyDelay (mrfi)
+           BSP_Delay               00000528        MRFI_ReplyDelay (mrfi)
                                                    Mrfi_DelayUsec (mrfi)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000501 - 0000050B (0xb bytes), align: 0
+  Relative segment, address: CODE 0000054C - 00000556 (0xb bytes), align: 0
   Segment part 16.            Intra module refs:   BSP_Init
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           BSP_InitLeds            00000501 
+           BSP_InitLeds            0000054C 
                XSTACK = 00000002 ( 00000000 )
 
     *************************************************************************
@@ -348,46 +348,65 @@ XDATA_Z
            sUartCmd                0000F40A        UART0_RX_ISR (uart)
                                                    UART1_RX_ISR (uart)
     -------------------------------------------------------------------------
-XDATA_Z
-  Relative segment, address: XDATA 0000F40B - 0000F40B (0x1 bytes), align: 0
-  Segment part 13.            Intra module refs:   sCB
-           LOCAL                   ADDRESS         
-           =====                   =======         
-           sBlinky                 0000F40B 
-    -------------------------------------------------------------------------
-NEAR_CODE
-  Relative segment, address: CODE 0000050C - 00000657 (0x14c bytes), align: 0
-  Segment part 14.
+XDATA_I
+  Relative segment, address: XDATA 0000F6BC - 0000F6BC (0x1 bytes), align: 0
+  Segment part 13.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           main                    0000050C        ?call_main (?cmain)
+           Lock_Flag               0000F6BC        uart_decode_cmd_callback (uart_app)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 0000F40B - 0000F40B (0x1 bytes), align: 0
+  Segment part 15.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Panic_Flag              0000F40B        uart_decode_cmd_callback (uart_app)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 0000F40C - 0000F40C (0x1 bytes), align: 0
+  Segment part 16.            Intra module refs:   sCB
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           sBlinky                 0000F40C 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00000557 - 000006EC (0x196 bytes), align: 0
+  Segment part 17.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           main                    00000557        ?call_main (?cmain)
                calls direct
                XSTACK = 00000000 ( 00000023 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000658 - 00000660 (0x9 bytes), align: 0
-  Segment part 15.            Intra module refs:   main
+  Relative segment, address: CODE 000006ED - 000006F5 (0x9 bytes), align: 0
+  Segment part 18.            Intra module refs:   main
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00000658 
+           ?Subroutine0            000006ED 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000661 - 00000676 (0x16 bytes), align: 0
-  Segment part 16.            Intra module refs:   main
+  Relative segment, address: CODE 000006F6 - 0000070B (0x16 bytes), align: 0
+  Segment part 19.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           toggleLED               00000661 
+           toggleLED               000006F6        UART1_RX_ISR (uart)
+                                                   UART1_TX_ISR (uart)
                XSTACK = 00000021 ( 00000000 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000677 - 00000696 (0x20 bytes), align: 0
-  Segment part 17.            Intra module refs:   main
+  Relative segment, address: CODE 0000070C - 0000072B (0x20 bytes), align: 0
+  Segment part 20.            Intra module refs:   main
            LOCAL                   ADDRESS         
            =====                   =======         
-           sCB                     00000677 
+           sCB                     0000070C 
                is indirectly called
                ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000000E5 - 000000E5 (0x1 bytes), align: 0
+  Segment part 14.            Intra module refs:   Lock_Flag
 
     *************************************************************************
 
@@ -508,7 +527,7 @@ SFR_AN
            RFIF                    000000E9 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F40C - 0000F40C (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F40D - 0000F40D (0x1 bytes), align: 0
   Segment part 21.            Intra module refs:   MRFI_GetRadioState
                                                    MRFI_Init
                                                    MRFI_RfIsr
@@ -520,149 +539,149 @@ XDATA_Z
                                                    MRFI_WakeUp
            LOCAL                   ADDRESS         
            =====                   =======         
-           mrfiRadioState          0000F40C 
+           mrfiRadioState          0000F40D 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F40D - 0000F43A (0x2e bytes), align: 0
+  Relative segment, address: XDATA 0000F40E - 0000F43B (0x2e bytes), align: 0
   Segment part 22.            Intra module refs:   ?Subroutine4
                                                    MRFI_Receive
                                                    MRFI_RfIsr
                                                    Mrfi_RxModeOn
            LOCAL                   ADDRESS         
            =====                   =======         
-           mrfiIncomingPacket      0000F40D 
+           mrfiIncomingPacket      0000F40E 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F43B - 0000F43B (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F43C - 0000F43C (0x1 bytes), align: 0
   Segment part 23.            Intra module refs:   MRFI_PostKillSem
                                                    MRFI_ReplyDelay
            LOCAL                   ADDRESS         
            =====                   =======         
-           sKillSem                0000F43B 
+           sKillSem                0000F43C 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F43C - 0000F43C (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F43D - 0000F43D (0x1 bytes), align: 0
   Segment part 24.            Intra module refs:   MRFI_PostKillSem
                                                    MRFI_ReplyDelay
            LOCAL                   ADDRESS         
            =====                   =======         
-           sReplyDelayContext      0000F43C 
+           sReplyDelayContext      0000F43D 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F43D - 0000F43E (0x2 bytes), align: 0
+  Relative segment, address: XDATA 0000F43E - 0000F43F (0x2 bytes), align: 0
   Segment part 25.            Intra module refs:   MRFI_Init
                                                    MRFI_ReplyDelay
            LOCAL                   ADDRESS         
            =====                   =======         
-           sReplyDelayScalar       0000F43D 
+           sReplyDelayScalar       0000F43E 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F43F - 0000F440 (0x2 bytes), align: 0
+  Relative segment, address: XDATA 0000F440 - 0000F441 (0x2 bytes), align: 0
   Segment part 26.            Intra module refs:   MRFI_Init
                                                    MRFI_Transmit
            LOCAL                   ADDRESS         
            =====                   =======         
-           sBackoffHelper          0000F43F 
+           sBackoffHelper          0000F440 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F441 - 0000F448 (0x8 bytes), align: 0
+  Relative segment, address: XDATA 0000F442 - 0000F449 (0x8 bytes), align: 0
   Segment part 27.            Intra module refs:   ?Subroutine6
                                                    MRFI_Init
                                                    MRFI_Transmit
                                                    Mrfi_RxModeOn
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           mrfiDmaCfg              0000F441 
+           mrfiDmaCfg              0000F442 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000697 - 00000802 (0x16c bytes), align: 0
+  Relative segment, address: CODE 0000072C - 00000897 (0x16c bytes), align: 0
   Segment part 37.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_Init               00000697        SMPL_Init (nwk_api)
+           MRFI_Init               0000072C        SMPL_Init (nwk_api)
                calls direct
                XSTACK = 00000000 ( 0000000B )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000803 - 000008C9 (0xc7 bytes), align: 0
+  Relative segment, address: CODE 00000898 - 0000095E (0xc7 bytes), align: 0
   Segment part 38.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_Transmit           00000803        ?Subroutine4 (nwk_frame)
+           MRFI_Transmit           00000898        ?Subroutine4 (nwk_frame)
                                                    nwk_sendFrame (nwk_frame)
                calls direct
                XSTACK = 00000000 ( 0000000A )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000008CA - 000008CE (0x5 bytes), align: 0
+  Relative segment, address: CODE 0000095F - 00000963 (0x5 bytes), align: 0
   Segment part 39.            Intra module refs:   MRFI_ReplyDelay
                                                    MRFI_Transmit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine1            000008CA 
+           ?Subroutine1            0000095F 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000008CF - 000008E1 (0x13 bytes), align: 0
+  Relative segment, address: CODE 00000964 - 00000976 (0x13 bytes), align: 0
   Segment part 40.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_Receive            000008CF        MRFI_RxCompleteISR (nwk_frame)
+           MRFI_Receive            00000964        MRFI_RxCompleteISR (nwk_frame)
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000008E2 - 000009AB (0xca bytes), align: 0
+  Relative segment, address: CODE 00000977 - 00000A40 (0xca bytes), align: 0
   Segment part 41.            Intra module refs:   MRFI_RfIsr::??INTVEC 131
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_RfIsr              000008E2 
+           MRFI_RfIsr              00000977 
                interrupt function
                calls direct
                XSTACK = 00000000 ( 00000002 )
                ISTACK = 00000000 ( 00000010 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000009AC - 000009B9 (0xe bytes), align: 0
+  Relative segment, address: CODE 00000A41 - 00000A4E (0xe bytes), align: 0
   Segment part 42.            Intra module refs:   MRFI_Init
                                                    MRFI_RfIsr
                                                    Mrfi_RxModeOn
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine4            000009AC 
+           ?Subroutine4            00000A41 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000009BA - 000009D9 (0x20 bytes), align: 0
+  Relative segment, address: CODE 00000A4F - 00000A6E (0x20 bytes), align: 0
   Segment part 43.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_Sleep              000009BA        SMPL_LinkListen (nwk_api)
+           MRFI_Sleep              00000A4F        SMPL_LinkListen (nwk_api)
                                                    SMPL_SendOpt (nwk_api)
                calls direct
                XSTACK = 00000000 ( 00000008 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000009DA - 00000A06 (0x2d bytes), align: 0
+  Relative segment, address: CODE 00000A6F - 00000A9B (0x2d bytes), align: 0
   Segment part 44.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_WakeUp             000009DA        SMPL_Init (nwk_api)
+           MRFI_WakeUp             00000A6F        SMPL_Init (nwk_api)
                                                    SMPL_LinkListen (nwk_api)
                                                    SMPL_SendOpt (nwk_api)
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000A07 - 00000A18 (0x12 bytes), align: 0
+  Relative segment, address: CODE 00000A9C - 00000AAD (0x12 bytes), align: 0
   Segment part 45.            Intra module refs:   MRFI_Init
                                                    MRFI_WakeUp
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine7            00000A07 
+           ?Subroutine7            00000A9C 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000A19 - 00000A1E (0x6 bytes), align: 0
+  Relative segment, address: CODE 00000AAE - 00000AB3 (0x6 bytes), align: 0
   Segment part 46.            Intra module refs:   MRFI_Transmit
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_RandomByte         00000A19        nwk_frameInit (nwk_frame)
+           MRFI_RandomByte         00000AAE        nwk_frameInit (nwk_frame)
                                                    nwk_joinInit (nwk_join)
                                                    nwk_linkInit (nwk_link)
                                                    nwk_mgmtInit (nwk_mgmt)
@@ -670,38 +689,38 @@ NEAR_CODE
                XSTACK = 0000000A ( 00000000 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000A1F - 00000A69 (0x4b bytes), align: 0
+  Relative segment, address: CODE 00000AB4 - 00000AFE (0x4b bytes), align: 0
   Segment part 47.            Intra module refs:   MRFI_RfIsr
                                                    MRFI_RxOn
                                                    MRFI_SetLogicalChannel
                                                    MRFI_Transmit
            LOCAL                   ADDRESS         
            =====                   =======         
-           Mrfi_RxModeOn           00000A1F 
+           Mrfi_RxModeOn           00000AB4 
                calls direct
                XSTACK = 0000000A ( 0000000B )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000A6A - 00000A7A (0x11 bytes), align: 0
+  Relative segment, address: CODE 00000AFF - 00000B0F (0x11 bytes), align: 0
   Segment part 48.            Intra module refs:   MRFI_Transmit
                                                    Mrfi_RxModeOn
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine6            00000A6A 
+           ?Subroutine6            00000AFF 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000A7B - 00000A97 (0x1d bytes), align: 0
+  Relative segment, address: CODE 00000B10 - 00000B2C (0x1d bytes), align: 0
   Segment part 49.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_RxOn               00000A7B        SMPL_Init (nwk_api)
+           MRFI_RxOn               00000B10        SMPL_Init (nwk_api)
                                                    SMPL_LinkListen (nwk_api)
                                                    SMPL_SendOpt (nwk_api)
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000A98 - 00000AB4 (0x1d bytes), align: 0
+  Relative segment, address: CODE 00000B2D - 00000B49 (0x1d bytes), align: 0
   Segment part 50.            Intra module refs:   MRFI_Init
                                                    MRFI_RfIsr
                                                    MRFI_RxIdle
@@ -709,48 +728,48 @@ NEAR_CODE
                                                    MRFI_Transmit
            LOCAL                   ADDRESS         
            =====                   =======         
-           Mrfi_RxModeOff          00000A98 
+           Mrfi_RxModeOff          00000B2D 
                XSTACK = 0000000A ( 00000000 )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000AB5 - 00000ABD (0x9 bytes), align: 0
+  Relative segment, address: CODE 00000B4A - 00000B52 (0x9 bytes), align: 0
   Segment part 51.            Intra module refs:   Mrfi_RxModeOff
                                                    Mrfi_RxModeOn
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine10           00000AB5 
+           ?Subroutine10           00000B4A 
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 0000F6E9 - 0000F6EC (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F6BD - 0000F6C0 (0x4 bytes), align: 0
   Segment part 28.            Intra module refs:   MRFI_RxAddrIsFiltered
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           mrfiBroadcastAddr       0000F6E9        nwk_getBCastAddress (nwk_globals)
+           mrfiBroadcastAddr       0000F6BD        nwk_getBCastAddress (nwk_globals)
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 0000F6ED - 0000F6F0 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F6C1 - 0000F6C4 (0x4 bytes), align: 0
   Segment part 30.            Intra module refs:   MRFI_SetLogicalChannel
            LOCAL                   ADDRESS         
            =====                   =======         
-           mrfiLogicalChanTable    0000F6ED 
+           mrfiLogicalChanTable    0000F6C1 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F449 - 0000F449 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F44A - 0000F44A (0x1 bytes), align: 0
   Segment part 34.            Intra module refs:   MRFI_RxAddrIsFiltered
            LOCAL                   ADDRESS         
            =====                   =======         
-           mrfiRxFilterEnabled     0000F449 
+           mrfiRxFilterEnabled     0000F44A 
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 0000F6F1 - 0000F6F4 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F6C5 - 0000F6C8 (0x4 bytes), align: 0
   Segment part 35.            Intra module refs:   ?Subroutine9
            LOCAL                   ADDRESS         
            =====                   =======         
-           mrfiRxFilterAddr        0000F6F1 
+           mrfiRxFilterAddr        0000F6C5 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000ABE - 00000AC2 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000B53 - 00000B57 (0x5 bytes), align: 0
   Segment part 53.            Intra module refs:   MRFI_GetRadioState
                                                    MRFI_PostKillSem
                                                    MRFI_Receive
@@ -760,64 +779,64 @@ NEAR_CODE
                                                    Mrfi_RxModeOff
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000AC3 - 00000ADF (0x1d bytes), align: 0
+  Relative segment, address: CODE 00000B58 - 00000B74 (0x1d bytes), align: 0
   Segment part 54.            Intra module refs:   MRFI_Sleep
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_RxIdle             00000AC3        SMPL_LinkListen (nwk_api)
+           MRFI_RxIdle             00000B58        SMPL_LinkListen (nwk_api)
                                                    SMPL_SendOpt (nwk_api)
                calls direct
                XSTACK = 00000008 ( 00000000 )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000AE0 - 00000B1E (0x3f bytes), align: 0
+  Relative segment, address: CODE 00000B75 - 00000BB3 (0x3f bytes), align: 0
   Segment part 55.            Intra module refs:   ?Subroutine5
                                                    MRFI_DelayMs
                                                    MRFI_Init
                                                    MRFI_Transmit
            LOCAL                   ADDRESS         
            =====                   =======         
-           Mrfi_DelayUsec          00000AE0 
+           Mrfi_DelayUsec          00000B75 
                calls direct
                XSTACK = 0000000A ( 00000009 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000B1F - 00000B23 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000BB4 - 00000BB8 (0x5 bytes), align: 0
   Segment part 56.            Intra module refs:   MRFI_Init
                                                    MRFI_SetLogicalChannel
                                                    Mrfi_DelayUsec
                                                    Mrfi_RxModeOn
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00000B1F 
+           ?Subroutine0            00000BB4 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000B24 - 00000B45 (0x22 bytes), align: 0
+  Relative segment, address: CODE 00000BB9 - 00000BDA (0x22 bytes), align: 0
   Segment part 57.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_DelayMs            00000B24        SMPL_LinkListen (nwk_api)
+           MRFI_DelayMs            00000BB9        SMPL_LinkListen (nwk_api)
                                                    main (main_AP_Async_Listen_autoack)
                                                    nwk_replayFrame (nwk_frame)
                calls direct
                XSTACK = 00000000 ( 00000008 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000B46 - 00000BC2 (0x7d bytes), align: 0
+  Relative segment, address: CODE 00000BDB - 00000C57 (0x7d bytes), align: 0
   Segment part 58.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_ReplyDelay         00000B46        SMPL_SendOpt (nwk_api)
+           MRFI_ReplyDelay         00000BDB        SMPL_SendOpt (nwk_api)
                calls direct
                XSTACK = 00000000 ( 0000000A )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000BC3 - 00000BD5 (0x13 bytes), align: 0
+  Relative segment, address: CODE 00000C58 - 00000C6A (0x13 bytes), align: 0
   Segment part 59.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_PostKillSem        00000BC3        nwk_isConnectionValid (nwk)
+           MRFI_PostKillSem        00000C58        nwk_isConnectionValid (nwk)
                                                    nwk_processJoin (nwk_join)
                                                    nwk_processLink (nwk_link)
                                                    nwk_processMgmt (nwk_mgmt)
@@ -825,70 +844,70 @@ NEAR_CODE
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000BD6 - 00000BDA (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000C6B - 00000C6F (0x5 bytes), align: 0
   Segment part 61.            Intra module refs:   MRFI_DelayMs
                                                    MRFI_RxAddrIsFiltered
                                                    MRFI_Sleep
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine3            00000BD6 
+           ?Subroutine3            00000C6B 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000BDB - 00000BF6 (0x1c bytes), align: 0
+  Relative segment, address: CODE 00000C70 - 00000C8B (0x1c bytes), align: 0
   Segment part 62.            Intra module refs:   MRFI_Transmit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine5            00000BDB 
+           ?Subroutine5            00000C70 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000BF7 - 00000C3F (0x49 bytes), align: 0
+  Relative segment, address: CODE 00000C8C - 00000CD4 (0x49 bytes), align: 0
   Segment part 63.            Intra module refs:   MRFI_RfIsr
            LOCAL                   ADDRESS         
            =====                   =======         
-           Mrfi_CalculateRssi      00000BF7 
+           Mrfi_CalculateRssi      00000C8C 
                XSTACK = 00000008 ( 00000000 )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000C40 - 00000C4B (0xc bytes), align: 0
+  Relative segment, address: CODE 00000CD5 - 00000CE0 (0xc bytes), align: 0
   Segment part 64.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_GetRadioState      00000C40        SMPL_LinkListen (nwk_api)
+           MRFI_GetRadioState      00000CD5        SMPL_LinkListen (nwk_api)
                                                    SMPL_SendOpt (nwk_api)
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000C4C - 00000C7B (0x30 bytes), align: 0
+  Relative segment, address: CODE 00000CE1 - 00000D10 (0x30 bytes), align: 0
   Segment part 65.            Intra module refs:   MRFI_Init
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            MRFI_SetLogicalChannel
-                                   00000C4C 
+                                   00000CE1 
                calls direct
                XSTACK = 00000009 ( 00000009 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000C7C - 00000CC5 (0x4a bytes), align: 0
+  Relative segment, address: CODE 00000D11 - 00000D5A (0x4a bytes), align: 0
   Segment part 70.            Intra module refs:   MRFI_RfIsr
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_RxAddrIsFiltered   00000C7C 
+           MRFI_RxAddrIsFiltered   00000D11 
                XSTACK = 00000000 ( 00000008 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000CC6 - 00000CD0 (0xb bytes), align: 0
+  Relative segment, address: CODE 00000D5B - 00000D65 (0xb bytes), align: 0
   Segment part 71.            Intra module refs:   MRFI_RxAddrIsFiltered
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine9            00000CC6 
+           ?Subroutine9            00000D5B 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000CD1 - 00000CDB (0xb bytes), align: 0
+  Relative segment, address: CODE 00000D66 - 00000D70 (0xb bytes), align: 0
   Segment part 72.            Intra module refs:   MRFI_RxAddrIsFiltered
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine8            00000CD1 
+           ?Subroutine8            00000D66 
     -------------------------------------------------------------------------
 INTVEC
   Common segment, address: CODE 00000000 - 00000085 (0x86 bytes), align: 0
@@ -899,15 +918,15 @@ INTVEC
                                    00000083 
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 000000E5 - 000000E8 (0x4 bytes), align: 0
+  Relative segment, address: CODE 000000E6 - 000000E9 (0x4 bytes), align: 0
   Segment part 29.            Intra module refs:   mrfiBroadcastAddr
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 000000E9 - 000000EC (0x4 bytes), align: 0
+  Relative segment, address: CODE 000000EA - 000000ED (0x4 bytes), align: 0
   Segment part 31.            Intra module refs:   mrfiLogicalChanTable
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 000000ED - 000000F0 (0x4 bytes), align: 0
+  Relative segment, address: CODE 000000EE - 000000F1 (0x4 bytes), align: 0
   Segment part 36.            Intra module refs:   mrfiRxFilterAddr
 
     *************************************************************************
@@ -918,7 +937,7 @@ XDATA_ID
   SEGMENTS IN THE MODULE
   ======================
 XDATA_I
-  Relative segment, address: XDATA 0000F6F5 - 0000F775 (0x81 bytes), align: 0
+  Relative segment, address: XDATA 0000F6C9 - 0000F749 (0x81 bytes), align: 0
   Segment part 6.             Intra module refs:   ?Subroutine10
                                                    initializeConnection
                                                    map_lid2idx
@@ -932,61 +951,61 @@ XDATA_I
                                                    nwk_saveJoinedDevice
            LOCAL                   ADDRESS         
            =====                   =======         
-           sPersistInfo            0000F6F5 
+           sPersistInfo            0000F6C9 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000CDC - 00000D7B (0xa0 bytes), align: 0
+  Relative segment, address: CODE 00000D71 - 00000E10 (0xa0 bytes), align: 0
   Segment part 8.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_nwkInit             00000CDC        SMPL_Init (nwk_api)
+           nwk_nwkInit             00000D71        SMPL_Init (nwk_api)
                calls direct
                XSTACK = 00000000 ( 0000000B )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000D7C - 00000DA8 (0x2d bytes), align: 0
+  Relative segment, address: CODE 00000E11 - 00000E3D (0x2d bytes), align: 0
   Segment part 9.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getNextConnection   00000D7C        smpl_send_link_reply (nwk_link)
+           nwk_getNextConnection   00000E11        smpl_send_link_reply (nwk_link)
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000DA9 - 00000DAD (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000E3E - 00000E42 (0x5 bytes), align: 0
   Segment part 10.            Intra module refs:   initializeConnection
                                                    nwk_freeConnection
                                                    nwk_getNextConnection
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00000DA9 
+           ?Subroutine0            00000E3E 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000DAE - 00000E06 (0x59 bytes), align: 0
+  Relative segment, address: CODE 00000E43 - 00000E9B (0x59 bytes), align: 0
   Segment part 11.            Intra module refs:   nwk_findAlreadyJoined
                                                    nwk_getNextConnection
            LOCAL                   ADDRESS         
            =====                   =======         
-           initializeConnection    00000DAE 
+           initializeConnection    00000E43 
                calls direct
                XSTACK = 0000000D ( 00000001 )
                ISTACK = 00000000 ( 00000003 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000E07 - 00000E12 (0xc bytes), align: 0
+  Relative segment, address: CODE 00000E9C - 00000EA7 (0xc bytes), align: 0
   Segment part 12.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_freeConnection      00000E07        handleLinkRequest (nwk_link)
+           nwk_freeConnection      00000E9C        handleLinkRequest (nwk_link)
                                                    smpl_send_link_reply (nwk_link)
                ISTACK = 00000000 ( 00000003 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000E13 - 00000E41 (0x2f bytes), align: 0
+  Relative segment, address: CODE 00000EA8 - 00000ED6 (0x2f bytes), align: 0
   Segment part 13.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getConnInfo         00000E13        SMPL_Receive (nwk_api)
+           nwk_getConnInfo         00000EA8        SMPL_Receive (nwk_api)
                                                    SMPL_SendOpt (nwk_api)
                                                    nwk_QfindOldest (nwk_QMgmt)
                                                    nwk_retrieveFrame (nwk_frame)
@@ -994,162 +1013,162 @@ NEAR_CODE
                XSTACK = 00000000 ( 00000009 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000E42 - 00000E46 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000ED7 - 00000EDB (0x5 bytes), align: 0
   Segment part 14.            Intra module refs:   map_lid2idx
                                                    nwk_checkConnInfo
                                                    nwk_getConnInfo
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine1            00000E42 
+           ?Subroutine1            00000ED7 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000E47 - 00000E4D (0x7 bytes), align: 0
+  Relative segment, address: CODE 00000EDC - 00000EE2 (0x7 bytes), align: 0
   Segment part 15.            Intra module refs:   nwk_getConnInfo
                                                    nwk_getNextConnection
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine5            00000E47 
+           ?Subroutine5            00000EDC 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000E4E - 00000E5C (0xf bytes), align: 0
+  Relative segment, address: CODE 00000EE3 - 00000EF1 (0xf bytes), align: 0
   Segment part 16.            Intra module refs:   ?Subroutine5
                                                    nwk_getNextConnection
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine10           00000E4E 
+           ?Subroutine10           00000EE3 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000E5D - 00000EB7 (0x5b bytes), align: 0
+  Relative segment, address: CODE 00000EF2 - 00000F4C (0x5b bytes), align: 0
   Segment part 17.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_isLinkDuplicate     00000E5D        smpl_send_link_reply (nwk_link)
+           nwk_isLinkDuplicate     00000EF2        smpl_send_link_reply (nwk_link)
                calls direct
                XSTACK = 00000000 ( 0000000F )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000EB8 - 00000EBE (0x7 bytes), align: 0
+  Relative segment, address: CODE 00000F4D - 00000F53 (0x7 bytes), align: 0
   Segment part 19.            Intra module refs:   nwk_findAlreadyJoined
                                                    nwk_isConnectionValid
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine6            00000EB8 
+           ?Subroutine6            00000F4D 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000EBF - 00000EC1 (0x3 bytes), align: 0
+  Relative segment, address: CODE 00000F54 - 00000F56 (0x3 bytes), align: 0
   Segment part 20.            Intra module refs:   ?Subroutine6
                                                    nwk_allocateLocalRxPort
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000EC2 - 00000ECF (0xe bytes), align: 0
+  Relative segment, address: CODE 00000F57 - 00000F64 (0xe bytes), align: 0
   Segment part 21.            Intra module refs:   Segment part 20
                                                    nwk_isLinkDuplicate
                                                    nwk_saveJoinedDevice
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000ED0 - 00000ED4 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000F65 - 00000F69 (0x5 bytes), align: 0
   Segment part 22.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getSFInfoPtr        00000ED0        nwk_joinInit (nwk_join)
+           nwk_getSFInfoPtr        00000F65        nwk_joinInit (nwk_join)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000ED5 - 00000F5A (0x86 bytes), align: 0
+  Relative segment, address: CODE 00000F6A - 00000FEF (0x86 bytes), align: 0
   Segment part 23.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_saveJoinedDevice    00000ED5        smpl_send_join_reply (nwk_join)
+           nwk_saveJoinedDevice    00000F6A        smpl_send_join_reply (nwk_join)
                calls direct
                XSTACK = 00000000 ( 00000011 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000F5B - 00000F5F (0x5 bytes), align: 0
+  Relative segment, address: CODE 00000FF0 - 00000FF4 (0x5 bytes), align: 0
   Segment part 24.            Intra module refs:   nwk_allocateLocalRxPort
                                                    nwk_isConnectionValid
                                                    nwk_saveJoinedDevice
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine3            00000F5B 
+           ?Subroutine3            00000FF0 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000F60 - 00000F65 (0x6 bytes), align: 0
+  Relative segment, address: CODE 00000FF5 - 00000FFA (0x6 bytes), align: 0
   Segment part 25.            Intra module refs:   nwk_findAlreadyJoined
                                                    nwk_isLinkDuplicate
                                                    nwk_saveJoinedDevice
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine7            00000F60 
+           ?Subroutine7            00000FF5 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000F66 - 00000FAB (0x46 bytes), align: 0
+  Relative segment, address: CODE 00000FFB - 00001040 (0x46 bytes), align: 0
   Segment part 26.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_findAlreadyJoined   00000F66        smpl_send_link_reply (nwk_link)
+           nwk_findAlreadyJoined   00000FFB        smpl_send_link_reply (nwk_link)
                calls direct
                XSTACK = 00000000 ( 0000000F )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000FAC - 00000FB0 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001041 - 00001045 (0x5 bytes), align: 0
   Segment part 27.            Intra module refs:   nwk_findAlreadyJoined
                                                    nwk_findPeer
                                                    nwk_isLinkDuplicate
                                                    nwk_putNumObjectIntoMsg
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            00000FAC 
+           ?Subroutine2            00001041 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000FB1 - 00000FE1 (0x31 bytes), align: 0
+  Relative segment, address: CODE 00001046 - 00001076 (0x31 bytes), align: 0
   Segment part 28.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_checkConnInfo       00000FB1        SMPL_Receive (nwk_api)
+           nwk_checkConnInfo       00001046        SMPL_Receive (nwk_api)
                                                    SMPL_SendOpt (nwk_api)
                XSTACK = 00000000 ( 00000008 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00000FE2 - 000010B7 (0xd6 bytes), align: 0
+  Relative segment, address: CODE 00001077 - 0000114C (0xd6 bytes), align: 0
   Segment part 29.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_isConnectionValid   00000FE2        dispatchFrame (nwk_frame)
+           nwk_isConnectionValid   00001077        dispatchFrame (nwk_frame)
                calls direct
                XSTACK = 00000000 ( 00000011 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000010B8 - 00001219 (0x162 bytes), align: 0
+  Relative segment, address: CODE 0000114D - 000012AE (0x162 bytes), align: 0
   Segment part 30.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            nwk_allocateLocalRxPort
-                                   000010B8        smpl_send_link_reply (nwk_link)
+                                   0000114D        smpl_send_link_reply (nwk_link)
                calls direct
                XSTACK = 00000000 ( 00000019 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000121A - 0000121D (0x4 bytes), align: 0
+  Relative segment, address: CODE 000012AF - 000012B2 (0x4 bytes), align: 0
   Segment part 31.            Intra module refs:   nwk_isConnectionValid
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine9            0000121A 
+           ?Subroutine9            000012AF 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000121E - 00001223 (0x6 bytes), align: 0
+  Relative segment, address: CODE 000012B3 - 000012B8 (0x6 bytes), align: 0
   Segment part 32.            Intra module refs:   ?Subroutine9
                                                    map_lid2idx
                                                    nwk_allocateLocalRxPort
                                                    nwk_isConnectionValid
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001224 - 0000128F (0x6c bytes), align: 0
+  Relative segment, address: CODE 000012B9 - 00001324 (0x6c bytes), align: 0
   Segment part 33.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_isValidReply        00001224        nwk_processJoin (nwk_join)
+           nwk_isValidReply        000012B9        nwk_processJoin (nwk_join)
                                                    nwk_processLink (nwk_link)
                                                    nwk_processMgmt (nwk_mgmt)
                                                    nwk_processPing (nwk_ping)
@@ -1157,78 +1176,78 @@ NEAR_CODE
                XSTACK = 00000000 ( 0000000E )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001290 - 00001294 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001325 - 00001329 (0x5 bytes), align: 0
   Segment part 34.            Intra module refs:   nwk_getNumObjectFromMsg
                                                    nwk_isValidReply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine4            00001290 
+           ?Subroutine4            00001325 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001295 - 000012D4 (0x40 bytes), align: 0
+  Relative segment, address: CODE 0000132A - 00001369 (0x40 bytes), align: 0
   Segment part 35.            Intra module refs:   initializeConnection
                                                    nwk_getConnInfo
            LOCAL                   ADDRESS         
            =====                   =======         
-           map_lid2idx             00001295 
+           map_lid2idx             0000132A 
                XSTACK = 00000009 ( 00000008 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000012D5 - 00001339 (0x65 bytes), align: 0
+  Relative segment, address: CODE 0000136A - 000013CE (0x65 bytes), align: 0
   Segment part 36.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_findPeer            000012D5        handleLinkRequest (nwk_link)
+           nwk_findPeer            0000136A        handleLinkRequest (nwk_link)
                calls direct
                XSTACK = 00000000 ( 0000000F )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000133A - 0000133F (0x6 bytes), align: 0
+  Relative segment, address: CODE 000013CF - 000013D4 (0x6 bytes), align: 0
   Segment part 37.            Intra module refs:   nwk_findPeer
                                                    nwk_isConnectionValid
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine8            0000133A 
+           ?Subroutine8            000013CF 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001340 - 0000134D (0xe bytes), align: 0
+  Relative segment, address: CODE 000013D5 - 000013E2 (0xe bytes), align: 0
   Segment part 38.            Intra module refs:   ?Subroutine7
                                                    ?Subroutine8
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine11           00001340 
+           ?Subroutine11           000013D5 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000134E - 00001375 (0x28 bytes), align: 0
+  Relative segment, address: CODE 000013E3 - 0000140A (0x28 bytes), align: 0
   Segment part 39.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_checkAppMsgTID      0000134E        send_poll_reply (nwk_mgmt)
+           nwk_checkAppMsgTID      000013E3        send_poll_reply (nwk_mgmt)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001376 - 000013D2 (0x5d bytes), align: 0
+  Relative segment, address: CODE 0000140B - 00001467 (0x5d bytes), align: 0
   Segment part 40.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            nwk_getNumObjectFromMsg
-                                   00001376        smpl_send_join_reply (nwk_join)
+                                   0000140B        smpl_send_join_reply (nwk_join)
                                                    smpl_send_link_reply (nwk_link)
                calls direct
                XSTACK = 00000000 ( 0000000E )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000013D3 - 00001457 (0x85 bytes), align: 0
+  Relative segment, address: CODE 00001468 - 000014EC (0x85 bytes), align: 0
   Segment part 41.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            nwk_putNumObjectIntoMsg
-                                   000013D3        smpl_send_join_reply (nwk_join)
+                                   00001468        smpl_send_join_reply (nwk_join)
                calls direct
                XSTACK = 00000000 ( 00000015 )
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 000000F1 - 00000171 (0x81 bytes), align: 0
+  Relative segment, address: CODE 000000F2 - 00000172 (0x81 bytes), align: 0
   Segment part 7.             Intra module refs:   sPersistInfo
 
     *************************************************************************
@@ -1239,7 +1258,7 @@ XDATA_ID
   SEGMENTS IN THE MODULE
   ======================
 XDATA_Z
-  Relative segment, address: XDATA 0000F44A - 0000F569 (0x120 bytes), align: 0
+  Relative segment, address: XDATA 0000F44B - 0000F56A (0x120 bytes), align: 0
   Segment part 7.             Intra module refs:   nwk_QInit
                                                    nwk_QadjustOrder
                                                    nwk_QfindOldest
@@ -1247,86 +1266,86 @@ XDATA_Z
                                                    nwk_getQ
            LOCAL                   ADDRESS         
            =====                   =======         
-           sInFrameQ               0000F44A 
+           sInFrameQ               0000F44B 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F56A - 0000F5C9 (0x60 bytes), align: 0
+  Relative segment, address: XDATA 0000F56B - 0000F5CA (0x60 bytes), align: 0
   Segment part 8.             Intra module refs:   nwk_QInit
                                                    nwk_QfindSlot
                                                    nwk_getQ
            LOCAL                   ADDRESS         
            =====                   =======         
-           sOutFrameQ              0000F56A 
+           sOutFrameQ              0000F56B 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001458 - 00001497 (0x40 bytes), align: 0
+  Relative segment, address: CODE 000014ED - 0000152C (0x40 bytes), align: 0
   Segment part 9.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_QInit               00001458        nwk_nwkInit (nwk)
+           nwk_QInit               000014ED        nwk_nwkInit (nwk)
                calls direct
                XSTACK = 00000000 ( 0000000B )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001498 - 0000153E (0xa7 bytes), align: 0
+  Relative segment, address: CODE 0000152D - 000015D3 (0xa7 bytes), align: 0
   Segment part 10.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_QfindSlot           00001498        MRFI_RxCompleteISR (nwk_frame)
+           nwk_QfindSlot           0000152D        MRFI_RxCompleteISR (nwk_frame)
                                                    nwk_buildFrame (nwk_frame)
                calls direct
                XSTACK = 00000000 ( 0000000B )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000153F - 00001580 (0x42 bytes), align: 0
+  Relative segment, address: CODE 000015D4 - 00001615 (0x42 bytes), align: 0
   Segment part 11.            Intra module refs:   nwk_QfindSlot
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_QadjustOrder        0000153F        nwk_retrieveFrame (nwk_frame)
+           nwk_QadjustOrder        000015D4        nwk_retrieveFrame (nwk_frame)
                                                    send_poll_reply (nwk_mgmt)
                XSTACK = 0000000B ( 00000008 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001581 - 000017AE (0x22e bytes), align: 0
+  Relative segment, address: CODE 00001616 - 00001843 (0x22e bytes), align: 0
   Segment part 12.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_QfindOldest         00001581        nwk_getSandFFrame (nwk_frame)
+           nwk_QfindOldest         00001616        nwk_getSandFFrame (nwk_frame)
                                                    nwk_retrieveFrame (nwk_frame)
                calls direct
                XSTACK = 00000000 ( 0000001D )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000017AF - 000017B3 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001844 - 00001848 (0x5 bytes), align: 0
   Segment part 13.            Intra module refs:   nwk_QfindOldest
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine1            000017AF 
+           ?Subroutine1            00001844 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000017B4 - 000017BC (0x9 bytes), align: 0
+  Relative segment, address: CODE 00001849 - 00001851 (0x9 bytes), align: 0
   Segment part 14.            Intra module refs:   ?Subroutine1
                                                    nwk_QfindOldest
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            000017B4 
+           ?Subroutine2            00001849 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000017BD - 000017C7 (0xb bytes), align: 0
+  Relative segment, address: CODE 00001852 - 0000185C (0xb bytes), align: 0
   Segment part 15.            Intra module refs:   nwk_QfindOldest
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            000017BD 
+           ?Subroutine0            00001852 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000017C8 - 000017D6 (0xf bytes), align: 0
+  Relative segment, address: CODE 0000185D - 0000186B (0xf bytes), align: 0
   Segment part 16.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getQ                000017C8        isDupSandFFrame (nwk_frame)
+           nwk_getQ                0000185D        isDupSandFFrame (nwk_frame)
                                                    nwk_getSandFFrame (nwk_frame)
 
     *************************************************************************
@@ -1337,71 +1356,71 @@ NEAR_CODE
   SEGMENTS IN THE MODULE
   ======================
 XDATA_Z
-  Relative segment, address: XDATA 0000F5CA - 0000F5CA (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5CB - 0000F5CB (0x1 bytes), align: 0
   Segment part 7.             Intra module refs:   SMPL_Init
            LOCAL                   ADDRESS         
            =====                   =======         
-           sInit_done              0000F5CA 
+           sInit_done              0000F5CB 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000017D7 - 00001803 (0x2d bytes), align: 0
+  Relative segment, address: CODE 0000186C - 00001898 (0x2d bytes), align: 0
   Segment part 8.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           SMPL_Init               000017D7        main (main_AP_Async_Listen_autoack)
+           SMPL_Init               0000186C        main (main_AP_Async_Listen_autoack)
                calls direct
                XSTACK = 00000000 ( 00000008 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001804 - 00001872 (0x6f bytes), align: 0
+  Relative segment, address: CODE 00001899 - 00001907 (0x6f bytes), align: 0
   Segment part 9.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           SMPL_LinkListen         00001804        main (main_AP_Async_Listen_autoack)
+           SMPL_LinkListen         00001899        main (main_AP_Async_Listen_autoack)
                calls direct
                XSTACK = 00000000 ( 00000009 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001873 - 00001877 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001908 - 0000190C (0x5 bytes), align: 0
   Segment part 10.            Intra module refs:   SMPL_LinkListen
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00001873 
+           ?Subroutine0            00001908 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001878 - 00001A1F (0x1a8 bytes), align: 0
+  Relative segment, address: CODE 0000190D - 00001AB4 (0x1a8 bytes), align: 0
   Segment part 12.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           SMPL_SendOpt            00001878        main (main_AP_Async_Listen_autoack)
+           SMPL_SendOpt            0000190D        main (main_AP_Async_Listen_autoack)
                calls direct
                XSTACK = 0000000B ( 00000015 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001A20 - 00001A38 (0x19 bytes), align: 0
+  Relative segment, address: CODE 00001AB5 - 00001ACD (0x19 bytes), align: 0
   Segment part 13.            Intra module refs:   SMPL_SendOpt
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            00001A20 
+           ?Subroutine2            00001AB5 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001A39 - 00001AA6 (0x6e bytes), align: 0
+  Relative segment, address: CODE 00001ACE - 00001B3B (0x6e bytes), align: 0
   Segment part 14.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           SMPL_Receive            00001A39        main (main_AP_Async_Listen_autoack)
+           SMPL_Receive            00001ACE        main (main_AP_Async_Listen_autoack)
                calls direct
                XSTACK = 00000000 ( 00000016 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001AA7 - 00001AAB (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001B3C - 00001B40 (0x5 bytes), align: 0
   Segment part 19.            Intra module refs:   SMPL_SendOpt
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine1            00001AA7 
+           ?Subroutine1            00001B3C 
 
     *************************************************************************
 
@@ -1411,80 +1430,80 @@ NEAR_CODE
   SEGMENTS IN THE MODULE
   ======================
 XDATA_I
-  Relative segment, address: XDATA 0000F776 - 0000F781 (0xc bytes), align: 0
+  Relative segment, address: XDATA 0000F74A - 0000F755 (0xc bytes), align: 0
   Segment part 6.             Intra module refs:   dispatchFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           func                    0000F776 
+           func                    0000F74A 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5CB - 0000F5CB (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5CC - 0000F5CC (0x1 bytes), align: 0
   Segment part 8.             Intra module refs:   nwk_SendEmptyPollRspFrame
                                                    nwk_buildFrame
                                                    nwk_frameInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           sTRACTID                0000F5CB 
+           sTRACTID                0000F5CC 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5CC - 0000F5CD (0x2 bytes), align: 0
+  Relative segment, address: XDATA 0000F5CD - 0000F5CE (0x2 bytes), align: 0
   Segment part 9.             Intra module refs:   dispatchFrame
                                                    nwk_buildFrame
                                                    nwk_frameInit
                                                    nwk_sendAckReply
            LOCAL                   ADDRESS         
            =====                   =======         
-           sMyAddr                 0000F5CC 
+           sMyAddr                 0000F5CD 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5CE - 0000F5CE (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5CF - 0000F5CF (0x1 bytes), align: 0
   Segment part 10.            Intra module refs:   ?Subroutine14
                                                    nwk_SendEmptyPollRspFrame
                                                    nwk_frameInit
                                                    nwk_getMyRxType
            LOCAL                   ADDRESS         
            =====                   =======         
-           sMyRxType               0000F5CE 
+           sMyRxType               0000F5CF 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5CF - 0000F5CF (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5D0 - 0000F5D0 (0x1 bytes), align: 0
   Segment part 11.            Intra module refs:   ?Subroutine17
                                                    nwk_frameInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           sMyTxType               0000F5CF 
+           sMyTxType               0000F5D0 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5D0 - 0000F5D1 (0x2 bytes), align: 0
+  Relative segment, address: XDATA 0000F5D1 - 0000F5D2 (0x2 bytes), align: 0
   Segment part 12.            Intra module refs:   dispatchFrame
                                                    nwk_frameInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           spCallback              0000F5D0 
+           spCallback              0000F5D1 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001AAC - 00001AD7 (0x2c bytes), align: 0
+  Relative segment, address: CODE 00001B41 - 00001B6C (0x2c bytes), align: 0
   Segment part 13.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_frameInit           00001AAC        nwk_nwkInit (nwk)
+           nwk_frameInit           00001B41        nwk_nwkInit (nwk)
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001AD8 - 00001ADC (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001B6D - 00001B71 (0x5 bytes), align: 0
   Segment part 14.            Intra module refs:   nwk_frameInit
                                                    nwk_getMyRxType
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00001AD8 
+           ?Subroutine0            00001B6D 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001ADD - 00001B97 (0xbb bytes), align: 0
+  Relative segment, address: CODE 00001B72 - 00001C2C (0xbb bytes), align: 0
   Segment part 15.            Intra module refs:   nwk_buildAckReqFrame
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_buildFrame          00001ADD        ?Subroutine1 (nwk_link)
+           nwk_buildFrame          00001B72        ?Subroutine1 (nwk_link)
                                                    SMPL_SendOpt (nwk_api)
                                                    handleLinkRequest (nwk_link)
                                                    nwk_processPing (nwk_ping)
@@ -1494,107 +1513,107 @@ NEAR_CODE
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001B98 - 00001BA1 (0xa bytes), align: 0
+  Relative segment, address: CODE 00001C2D - 00001C36 (0xa bytes), align: 0
   Segment part 16.            Intra module refs:   nwk_buildFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine12           00001B98 
+           ?Subroutine12           00001C2D 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001BA2 - 00001BA6 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001C37 - 00001C3B (0x5 bytes), align: 0
   Segment part 17.            Intra module refs:   dispatchFrame
                                                    nwk_retrieveFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine1            00001BA2 
+           ?Subroutine1            00001C37 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001BA7 - 00001BAB (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001C3C - 00001C40 (0x5 bytes), align: 0
   Segment part 18.            Intra module refs:   ?Subroutine1
                                                    isDupSandFFrame
                                                    nwk_buildFrame
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001BAC - 00001BEC (0x41 bytes), align: 0
+  Relative segment, address: CODE 00001C41 - 00001C81 (0x41 bytes), align: 0
   Segment part 19.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_buildAckReqFrame    00001BAC        SMPL_SendOpt (nwk_api)
+           nwk_buildAckReqFrame    00001C41        SMPL_SendOpt (nwk_api)
                calls direct
                XSTACK = 00000002 ( 0000000D )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001BED - 00001C1B (0x2f bytes), align: 0
+  Relative segment, address: CODE 00001C82 - 00001CB0 (0x2f bytes), align: 0
   Segment part 20.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           MRFI_RxCompleteISR      00001BED        MRFI_RfIsr (mrfi)
+           MRFI_RxCompleteISR      00001C82        MRFI_RfIsr (mrfi)
                calls direct
                XSTACK = 00000000 ( 00000009 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001C1C - 00001C20 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001CB1 - 00001CB5 (0x5 bytes), align: 0
   Segment part 21.            Intra module refs:   MRFI_RxCompleteISR
                                                    nwk_sendAckReply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            00001C1C 
+           ?Subroutine2            00001CB1 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001C21 - 00001D3D (0x11d bytes), align: 0
+  Relative segment, address: CODE 00001CB6 - 00001DD2 (0x11d bytes), align: 0
   Segment part 22.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_retrieveFrame       00001C21        SMPL_Receive (nwk_api)
+           nwk_retrieveFrame       00001CB6        SMPL_Receive (nwk_api)
                calls direct
                XSTACK = 00000006 ( 00000013 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001D3E - 00001D51 (0x14 bytes), align: 0
+  Relative segment, address: CODE 00001DD3 - 00001DE6 (0x14 bytes), align: 0
   Segment part 23.            Intra module refs:   nwk_retrieveFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine9            00001D3E 
+           ?Subroutine9            00001DD3 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001D52 - 00001EDB (0x18a bytes), align: 0
+  Relative segment, address: CODE 00001DE7 - 00001F70 (0x18a bytes), align: 0
   Segment part 24.            Intra module refs:   MRFI_RxCompleteISR
            LOCAL                   ADDRESS         
            =====                   =======         
-           dispatchFrame           00001D52 
+           dispatchFrame           00001DE7 
                calls direct
                XSTACK = 00000009 ( 00000013 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001EDC - 00001EE6 (0xb bytes), align: 0
+  Relative segment, address: CODE 00001F71 - 00001F7B (0xb bytes), align: 0
   Segment part 25.            Intra module refs:   dispatchFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine16           00001EDC 
+           ?Subroutine16           00001F71 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001EE7 - 00001EEF (0x9 bytes), align: 0
+  Relative segment, address: CODE 00001F7C - 00001F84 (0x9 bytes), align: 0
   Segment part 26.            Intra module refs:   dispatchFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine15           00001EE7 
+           ?Subroutine15           00001F7C 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001EF0 - 00001EFB (0xc bytes), align: 0
+  Relative segment, address: CODE 00001F85 - 00001F90 (0xc bytes), align: 0
   Segment part 27.            Intra module refs:   dispatchFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine5            00001EF0 
+           ?Subroutine5            00001F85 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001EFC - 00001F33 (0x38 bytes), align: 0
+  Relative segment, address: CODE 00001F91 - 00001FC8 (0x38 bytes), align: 0
   Segment part 28.            Intra module refs:   nwk_replayFrame
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_sendFrame           00001EFC        SMPL_SendOpt (nwk_api)
+           nwk_sendFrame           00001F91        SMPL_SendOpt (nwk_api)
                                                    handleLinkRequest (nwk_link)
                                                    nwk_processPing (nwk_ping)
                                                    send_poll_reply (nwk_mgmt)
@@ -1605,181 +1624,181 @@ NEAR_CODE
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001F34 - 00001F38 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00001FC9 - 00001FCD (0x5 bytes), align: 0
   Segment part 29.            Intra module refs:   nwk_replayFrame
                                                    nwk_sendFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine3            00001F34 
+           ?Subroutine3            00001FC9 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001F39 - 00001F43 (0xb bytes), align: 0
+  Relative segment, address: CODE 00001FCE - 00001FD8 (0xb bytes), align: 0
   Segment part 30.            Intra module refs:   nwk_buildFrame
                                                    nwk_sendFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine11           00001F39 
+           ?Subroutine11           00001FCE 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001F44 - 00001F4F (0xc bytes), align: 0
+  Relative segment, address: CODE 00001FD9 - 00001FE4 (0xc bytes), align: 0
   Segment part 31.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getMyRxType         00001F44        smpl_send_link_reply (nwk_link)
+           nwk_getMyRxType         00001FD9        smpl_send_link_reply (nwk_link)
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001F50 - 00001FDC (0x8d bytes), align: 0
+  Relative segment, address: CODE 00001FE5 - 00002071 (0x8d bytes), align: 0
   Segment part 32.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_sendAckReply        00001F50        nwk_isConnectionValid (nwk)
+           nwk_sendAckReply        00001FE5        nwk_isConnectionValid (nwk)
                calls direct
                XSTACK = 00000000 ( 00000039 )
                ISTACK = 00000000 ( 00000004 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001FDD - 00001FE5 (0x9 bytes), align: 0
+  Relative segment, address: CODE 00002072 - 0000207A (0x9 bytes), align: 0
   Segment part 33.            Intra module refs:   nwk_sendAckReply
                                                    nwk_sendFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine17           00001FDD 
+           ?Subroutine17           00002072 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001FE6 - 00001FF1 (0xc bytes), align: 0
+  Relative segment, address: CODE 0000207B - 00002086 (0xc bytes), align: 0
   Segment part 34.            Intra module refs:   nwk_buildFrame
                                                    nwk_sendAckReply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine14           00001FE6 
+           ?Subroutine14           0000207B 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001FF2 - 00001FF5 (0x4 bytes), align: 0
+  Relative segment, address: CODE 00002087 - 0000208A (0x4 bytes), align: 0
   Segment part 35.            Intra module refs:   nwk_SendEmptyPollRspFrame
                                                    nwk_sendAckReply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine13           00001FF2 
+           ?Subroutine13           00002087 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001FF6 - 00001FFB (0x6 bytes), align: 0
+  Relative segment, address: CODE 0000208B - 00002090 (0x6 bytes), align: 0
   Segment part 36.            Intra module refs:   ?Subroutine13
                                                    nwk_retrieveFrame
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00001FFC - 00002005 (0xa bytes), align: 0
+  Relative segment, address: CODE 00002091 - 0000209A (0xa bytes), align: 0
   Segment part 37.            Intra module refs:   dispatchFrame
                                                    nwk_sendAckReply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine7            00001FFC 
+           ?Subroutine7            00002091 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002006 - 0000200B (0x6 bytes), align: 0
+  Relative segment, address: CODE 0000209B - 000020A0 (0x6 bytes), align: 0
   Segment part 38.            Intra module refs:   ?Subroutine5
                                                    ?Subroutine7
                                                    ?Subroutine9
                                                    Segment part 44
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine18           00002006 
+           ?Subroutine18           0000209B 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000200C - 00002046 (0x3b bytes), align: 0
+  Relative segment, address: CODE 000020A1 - 000020DB (0x3b bytes), align: 0
   Segment part 39.            Intra module refs:   dispatchFrame
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_replayFrame         0000200C 
+           nwk_replayFrame         000020A1 
                calls direct
                XSTACK = 00000011 ( 00000008 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002047 - 000020FF (0xb9 bytes), align: 0
+  Relative segment, address: CODE 000020DC - 00002194 (0xb9 bytes), align: 0
   Segment part 40.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getSandFFrame       00002047        send_poll_reply (nwk_mgmt)
+           nwk_getSandFFrame       000020DC        send_poll_reply (nwk_mgmt)
                calls direct
                XSTACK = 00000000 ( 00000013 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002100 - 000021AF (0xb0 bytes), align: 0
+  Relative segment, address: CODE 00002195 - 00002244 (0xb0 bytes), align: 0
   Segment part 41.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            nwk_SendEmptyPollRspFrame
-                                   00002100        send_poll_reply (nwk_mgmt)
+                                   00002195        send_poll_reply (nwk_mgmt)
                calls direct
                XSTACK = 00000000 ( 0000003B )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000021B0 - 000021B2 (0x3 bytes), align: 0
+  Relative segment, address: CODE 00002245 - 00002247 (0x3 bytes), align: 0
   Segment part 42.            Intra module refs:   nwk_replayFrame
                                                    nwk_retrieveFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine10           000021B0 
+           ?Subroutine10           00002245 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000021B3 - 000021B5 (0x3 bytes), align: 0
+  Relative segment, address: CODE 00002248 - 0000224A (0x3 bytes), align: 0
   Segment part 43.            Intra module refs:   ?Subroutine10
                                                    nwk_SendEmptyPollRspFrame
                                                    nwk_getSandFFrame
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000021B6 - 000021B9 (0x4 bytes), align: 0
+  Relative segment, address: CODE 0000224B - 0000224E (0x4 bytes), align: 0
   Segment part 44.            Intra module refs:   Segment part 43
                                                    nwk_buildAckReqFrame
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000021BA - 000021C4 (0xb bytes), align: 0
+  Relative segment, address: CODE 0000224F - 00002259 (0xb bytes), align: 0
   Segment part 45.            Intra module refs:   nwk_SendEmptyPollRspFrame
                                                    nwk_sendAckReply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine6            000021BA 
+           ?Subroutine6            0000224F 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000021C5 - 000021D7 (0x13 bytes), align: 0
+  Relative segment, address: CODE 0000225A - 0000226C (0x13 bytes), align: 0
   Segment part 46.            Intra module refs:   nwk_SendEmptyPollRspFrame
                                                    nwk_sendAckReply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine4            000021C5 
+           ?Subroutine4            0000225A 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000021D8 - 000022CB (0xf4 bytes), align: 0
+  Relative segment, address: CODE 0000226D - 00002360 (0xf4 bytes), align: 0
   Segment part 47.            Intra module refs:   dispatchFrame
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           isDupSandFFrame         000021D8 
+           isDupSandFFrame         0000226D 
                calls direct
                XSTACK = 00000011 ( 00000011 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000022CC - 000022CE (0x3 bytes), align: 0
+  Relative segment, address: CODE 00002361 - 00002363 (0x3 bytes), align: 0
   Segment part 48.            Intra module refs:   isDupSandFFrame
                                                    nwk_getSandFFrame
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine8            000022CC 
+           ?Subroutine8            00002361 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000022CF - 000022D0 (0x2 bytes), align: 0
+  Relative segment, address: CODE 00002364 - 00002365 (0x2 bytes), align: 0
   Segment part 49.            Intra module refs:   ?Subroutine8
                                                    isDupSandFFrame
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000022D1 - 000022D9 (0x9 bytes), align: 0
+  Relative segment, address: CODE 00002366 - 0000236E (0x9 bytes), align: 0
   Segment part 50.            Intra module refs:   Segment part 49
                                                    dispatchFrame
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 00000172 - 0000017D (0xc bytes), align: 0
+  Relative segment, address: CODE 00000173 - 0000017E (0xc bytes), align: 0
   Segment part 7.             Intra module refs:   func
 
     *************************************************************************
@@ -1790,18 +1809,18 @@ XDATA_ID
   SEGMENTS IN THE MODULE
   ======================
 NEAR_CODE
-  Relative segment, address: CODE 000022DA - 000022DA (0x1 bytes), align: 0
+  Relative segment, address: CODE 0000236F - 0000236F (0x1 bytes), align: 0
   Segment part 6.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_freqInit            000022DA        nwk_nwkInit (nwk)
+           nwk_freqInit            0000236F        nwk_nwkInit (nwk)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000022DB - 000022DD (0x3 bytes), align: 0
+  Relative segment, address: CODE 00002370 - 00002372 (0x3 bytes), align: 0
   Segment part 7.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_processFreq         000022DB        Segment part 7 (nwk_frame)
+           nwk_processFreq         00002370        Segment part 7 (nwk_frame)
                is indirectly called
 
     *************************************************************************
@@ -1812,78 +1831,78 @@ NEAR_CODE
   SEGMENTS IN THE MODULE
   ======================
 XDATA_I
-  Relative segment, address: XDATA 0000F782 - 0000F785 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F756 - 0000F759 (0x4 bytes), align: 0
   Segment part 6.             Intra module refs:   nwk_getMyAddress
                                                    nwk_globalsInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           sMyROMAddress           0000F782 
+           sMyROMAddress           0000F756 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5D2 - 0000F5D5 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F5D3 - 0000F5D6 (0x4 bytes), align: 0
   Segment part 8.             Intra module refs:   nwk_globalsInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           sAPAddress              0000F5D2 
+           sAPAddress              0000F5D3 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5D6 - 0000F5D9 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F5D7 - 0000F5DA (0x4 bytes), align: 0
   Segment part 9.             Intra module refs:   nwk_getMyAddress
                                                    nwk_globalsInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           sMyRAMAddress           0000F5D6 
+           sMyRAMAddress           0000F5D7 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5DA - 0000F5DA (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5DB - 0000F5DB (0x1 bytes), align: 0
   Segment part 10.            Intra module refs:   nwk_getMyAddress
                                                    nwk_globalsInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           sRAMAddressIsSet        0000F5DA 
+           sRAMAddressIsSet        0000F5DB 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000022DE - 00002320 (0x43 bytes), align: 0
+  Relative segment, address: CODE 00002373 - 000023B5 (0x43 bytes), align: 0
   Segment part 13.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_globalsInit         000022DE        nwk_nwkInit (nwk)
+           nwk_globalsInit         00002373        nwk_nwkInit (nwk)
                calls direct
                XSTACK = 00000000 ( 0000000B )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002321 - 00002325 (0x5 bytes), align: 0
+  Relative segment, address: CODE 000023B6 - 000023BA (0x5 bytes), align: 0
   Segment part 15.            Intra module refs:   nwk_globalsInit
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002326 - 0000233E (0x19 bytes), align: 0
+  Relative segment, address: CODE 000023BB - 000023D3 (0x19 bytes), align: 0
   Segment part 16.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getMyAddress        00002326        nwk_frameInit (nwk_frame)
+           nwk_getMyAddress        000023BB        nwk_frameInit (nwk_frame)
                                                    nwk_isValidReply (nwk)
                                                    nwk_processMgmt (nwk_mgmt)
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000233F - 00002341 (0x3 bytes), align: 0
+  Relative segment, address: CODE 000023D4 - 000023D6 (0x3 bytes), align: 0
   Segment part 18.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            nwk_getProtocolVersion
-                                   0000233F        smpl_send_join_reply (nwk_join)
+                                   000023D4        smpl_send_join_reply (nwk_join)
                                                    smpl_send_link_reply (nwk_link)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002342 - 00002346 (0x5 bytes), align: 0
+  Relative segment, address: CODE 000023D7 - 000023DB (0x5 bytes), align: 0
   Segment part 22.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getBCastAddress     00002342        dispatchFrame (nwk_frame)
+           nwk_getBCastAddress     000023D7        dispatchFrame (nwk_frame)
                                                    nwk_nwkInit (nwk)
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 0000017E - 00000181 (0x4 bytes), align: 0
+  Relative segment, address: CODE 0000017F - 00000182 (0x4 bytes), align: 0
   Segment part 7.             Intra module refs:   sMyROMAddress
 
     *************************************************************************
@@ -1897,86 +1916,86 @@ XDATA_ID
   SEGMENTS IN THE MODULE
   ======================
 XDATA_Z
-  Relative segment, address: XDATA 0000F5DB - 0000F5DE (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F5DC - 0000F5DF (0x4 bytes), align: 0
   Segment part 6.             Intra module refs:   nwk_joinInit
                                                    smpl_send_join_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           sJoinToken              0000F5DB 
+           sJoinToken              0000F5DC 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5DF - 0000F5E0 (0x2 bytes), align: 0
+  Relative segment, address: XDATA 0000F5E0 - 0000F5E1 (0x2 bytes), align: 0
   Segment part 7.             Intra module refs:   nwk_joinInit
                                                    smpl_send_join_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           spCallback              0000F5DF 
+           spCallback              0000F5E0 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5E1 - 0000F5E1 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5E2 - 0000F5E2 (0x1 bytes), align: 0
   Segment part 8.             Intra module refs:   nwk_joinInit
                                                    nwk_processJoin
            LOCAL                   ADDRESS         
            =====                   =======         
-           sTid                    0000F5E1 
+           sTid                    0000F5E2 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5E2 - 0000F5E3 (0x2 bytes), align: 0
+  Relative segment, address: XDATA 0000F5E3 - 0000F5E4 (0x2 bytes), align: 0
   Segment part 9.             Intra module refs:   nwk_isSandFClient
                                                    nwk_joinInit
                                                    smpl_send_join_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           spSandFContext          0000F5E2 
+           spSandFContext          0000F5E3 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5E4 - 0000F5E4 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5E5 - 0000F5E5 (0x1 bytes), align: 0
   Segment part 10.            Intra module refs:   nwk_joinInit
                                                    nwk_processJoin
            LOCAL                   ADDRESS         
            =====                   =======         
-           sJoinOK                 0000F5E4 
+           sJoinOK                 0000F5E5 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002347 - 000023A4 (0x5e bytes), align: 0
+  Relative segment, address: CODE 000023DC - 00002439 (0x5e bytes), align: 0
   Segment part 17.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_joinInit            00002347        nwk_nwkInit (nwk)
+           nwk_joinInit            000023DC        nwk_nwkInit (nwk)
                calls direct
                XSTACK = 00000000 ( 0000000B )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000023A5 - 000023A9 (0x5 bytes), align: 0
+  Relative segment, address: CODE 0000243A - 0000243E (0x5 bytes), align: 0
   Segment part 18.            Intra module refs:   nwk_joinInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            000023A5 
+           ?Subroutine0            0000243A 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000023AA - 0000256A (0x1c1 bytes), align: 0
+  Relative segment, address: CODE 0000243F - 000025FF (0x1c1 bytes), align: 0
   Segment part 21.            Intra module refs:   nwk_processJoin
            LOCAL                   ADDRESS         
            =====                   =======         
-           smpl_send_join_reply    000023AA 
+           smpl_send_join_reply    0000243F 
                calls direct
                XSTACK = 00000009 ( 0000001B )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000256B - 0000256D (0x3 bytes), align: 0
+  Relative segment, address: CODE 00002600 - 00002602 (0x3 bytes), align: 0
   Segment part 22.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_join                0000256B        SMPL_Init (nwk_api)
+           nwk_join                00002600        SMPL_Init (nwk_api)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000256E - 000025DC (0x6f bytes), align: 0
+  Relative segment, address: CODE 00002603 - 00002671 (0x6f bytes), align: 0
   Segment part 23.            Intra module refs:   smpl_send_join_reply
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_isSandFClient       0000256E        SMPL_SendOpt (nwk_api)
+           nwk_isSandFClient       00002603        SMPL_SendOpt (nwk_api)
                                                    dispatchFrame (nwk_frame)
                                                    send_poll_reply (nwk_mgmt)
                calls direct
@@ -1984,56 +2003,56 @@ NEAR_CODE
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000025DD - 000025E5 (0x9 bytes), align: 0
+  Relative segment, address: CODE 00002672 - 0000267A (0x9 bytes), align: 0
   Segment part 24.            Intra module refs:   nwk_isSandFClient
                                                    smpl_send_join_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine1            000025DD 
+           ?Subroutine1            00002672 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000025E6 - 00002661 (0x7c bytes), align: 0
+  Relative segment, address: CODE 0000267B - 000026F6 (0x7c bytes), align: 0
   Segment part 26.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_processJoin         000025E6        Segment part 7 (nwk_frame)
+           nwk_processJoin         0000267B        Segment part 7 (nwk_frame)
                calls direct, is indirectly called
                XSTACK = 00000000 ( 00000009 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 0000F786 - 0000F789 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F75A - 0000F75D (0x4 bytes), align: 0
   Segment part 11.            Intra module refs:   nwk_joinInit
                                                    nwk_linkInit (nwk_link)
                                                    nwk_setLinkToken (nwk_link)
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_0            0000F786 
+           __Constant_0            0000F75A 
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 00000182 - 00000185 (0x4 bytes), align: 0
+  Relative segment, address: CODE 00000183 - 00000186 (0x4 bytes), align: 0
   Segment part 12.            Intra module refs:   __Constant_0
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 0000F78A - 0000F78D (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F75E - 0000F761 (0x4 bytes), align: 0
   Segment part 13.            Intra module refs:   nwk_joinInit
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_5060708      0000F78A 
+           __Constant_5060708      0000F75E 
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 00000186 - 00000189 (0x4 bytes), align: 0
+  Relative segment, address: CODE 00000187 - 0000018A (0x4 bytes), align: 0
   Segment part 14.            Intra module refs:   __Constant_5060708
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 0000F78E - 0000F791 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F762 - 0000F765 (0x4 bytes), align: 0
   Segment part 15.            Intra module refs:   nwk_joinInit
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_deadbeef     0000F78E 
+           __Constant_deadbeef     0000F762 
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 0000018A - 0000018D (0x4 bytes), align: 0
+  Relative segment, address: CODE 0000018B - 0000018E (0x4 bytes), align: 0
   Segment part 16.            Intra module refs:   __Constant_deadbeef
 
     *************************************************************************
@@ -2044,206 +2063,206 @@ XDATA_ID
   SEGMENTS IN THE MODULE
   ======================
 XDATA_Z
-  Relative segment, address: XDATA 0000F5E5 - 0000F5E8 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F5E6 - 0000F5E9 (0x4 bytes), align: 0
   Segment part 7.             Intra module refs:   nwk_getLinkToken
                                                    nwk_linkInit
                                                    nwk_setLinkToken
                                                    smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           sLinkToken              0000F5E5 
+           sLinkToken              0000F5E6 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5E9 - 0000F5E9 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5EA - 0000F5EA (0x1 bytes), align: 0
   Segment part 8.             Intra module refs:   handleLinkRequest
                                                    nwk_setListenContext
                                                    smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           sListenActive           0000F5E9 
+           sListenActive           0000F5EA 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5EA - 0000F5F1 (0x8 bytes), align: 0
+  Relative segment, address: XDATA 0000F5EB - 0000F5F2 (0x8 bytes), align: 0
   Segment part 9.             Intra module refs:   nwk_getLocalLinkID
                                                    nwk_linkInit
                                                    smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           sServiceLinkID          0000F5EA 
+           sServiceLinkID          0000F5EB 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5F2 - 0000F5F2 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5F3 - 0000F5F3 (0x1 bytes), align: 0
   Segment part 10.            Intra module refs:   nwk_getLocalLinkID
                                                    smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           sNumLinkers             0000F5F2 
+           sNumLinkers             0000F5F3 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5F3 - 0000F5F3 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5F4 - 0000F5F4 (0x1 bytes), align: 0
   Segment part 11.            Intra module refs:   nwk_linkInit
                                                    nwk_processLink
            LOCAL                   ADDRESS         
            =====                   =======         
-           sTid                    0000F5F3 
+           sTid                    0000F5F4 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002662 - 000026AF (0x4e bytes), align: 0
+  Relative segment, address: CODE 000026F7 - 00002744 (0x4e bytes), align: 0
   Segment part 16.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_linkInit            00002662        nwk_nwkInit (nwk)
+           nwk_linkInit            000026F7        nwk_nwkInit (nwk)
                calls direct
                XSTACK = 00000000 ( 0000000D )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000026B0 - 000026D0 (0x21 bytes), align: 0
+  Relative segment, address: CODE 00002745 - 00002765 (0x21 bytes), align: 0
   Segment part 17.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_setLinkToken        000026B0        nwk_joinInit (nwk_join)
+           nwk_setLinkToken        00002745        nwk_joinInit (nwk_join)
                XSTACK = 00000000 ( 0000000B )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000026D1 - 000026D3 (0x3 bytes), align: 0
+  Relative segment, address: CODE 00002766 - 00002768 (0x3 bytes), align: 0
   Segment part 18.            Intra module refs:   nwk_linkInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            000026D1 
+           ?Subroutine0            00002766 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000026D4 - 000026D8 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00002769 - 0000276D (0x5 bytes), align: 0
   Segment part 19.            Intra module refs:   ?Subroutine0
                                                    nwk_getLinkToken
                                                    nwk_setLinkToken
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000026D9 - 000026F6 (0x1e bytes), align: 0
+  Relative segment, address: CODE 0000276E - 0000278B (0x1e bytes), align: 0
   Segment part 20.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getLinkToken        000026D9        smpl_send_join_reply (nwk_join)
+           nwk_getLinkToken        0000276E        smpl_send_join_reply (nwk_join)
                XSTACK = 00000000 ( 0000000B )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000026F7 - 000028D7 (0x1e1 bytes), align: 0
+  Relative segment, address: CODE 0000278C - 0000296C (0x1e1 bytes), align: 0
   Segment part 26.            Intra module refs:   handleLinkRequest
            LOCAL                   ADDRESS         
            =====                   =======         
-           smpl_send_link_reply    000026F7 
+           smpl_send_link_reply    0000278C 
                calls direct
                XSTACK = 00000010 ( 00000019 )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000028D8 - 000028DB (0x4 bytes), align: 0
+  Relative segment, address: CODE 0000296D - 00002970 (0x4 bytes), align: 0
   Segment part 27.            Intra module refs:   smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine8            000028D8 
+           ?Subroutine8            0000296D 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000028DC - 000028E1 (0x6 bytes), align: 0
+  Relative segment, address: CODE 00002971 - 00002976 (0x6 bytes), align: 0
   Segment part 28.            Intra module refs:   ?Subroutine8
                                                    handleLinkRequest
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000028E2 - 000028EE (0xd bytes), align: 0
+  Relative segment, address: CODE 00002977 - 00002983 (0xd bytes), align: 0
   Segment part 29.            Intra module refs:   smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine5            000028E2 
+           ?Subroutine5            00002977 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000028EF - 00002905 (0x17 bytes), align: 0
+  Relative segment, address: CODE 00002984 - 0000299A (0x17 bytes), align: 0
   Segment part 30.            Intra module refs:   smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine3            000028EF 
+           ?Subroutine3            00002984 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002906 - 0000290A (0x5 bytes), align: 0
+  Relative segment, address: CODE 0000299B - 0000299F (0x5 bytes), align: 0
   Segment part 31.            Intra module refs:   smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            00002906 
+           ?Subroutine2            0000299B 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000290B - 00002919 (0xf bytes), align: 0
+  Relative segment, address: CODE 000029A0 - 000029AE (0xf bytes), align: 0
   Segment part 32.            Intra module refs:   ?Subroutine2
                                                    smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine9            0000290B 
+           ?Subroutine9            000029A0 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000291A - 0000294C (0x33 bytes), align: 0
+  Relative segment, address: CODE 000029AF - 000029E1 (0x33 bytes), align: 0
   Segment part 33.            Intra module refs:   smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine1            0000291A 
+           ?Subroutine1            000029AF 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 0000294D - 00002981 (0x35 bytes), align: 0
+  Relative segment, address: CODE 000029E2 - 00002A16 (0x35 bytes), align: 0
   Segment part 34.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_processLink         0000294D        Segment part 7 (nwk_frame)
+           nwk_processLink         000029E2        Segment part 7 (nwk_frame)
                calls direct, is indirectly called
                XSTACK = 00000000 ( 00000008 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002982 - 000029D6 (0x55 bytes), align: 0
+  Relative segment, address: CODE 00002A17 - 00002A6B (0x55 bytes), align: 0
   Segment part 35.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_getLocalLinkID      00002982        SMPL_LinkListen (nwk_api)
+           nwk_getLocalLinkID      00002A17        SMPL_LinkListen (nwk_api)
                calls direct
                XSTACK = 00000000 ( 00000009 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000029D7 - 000029EB (0x15 bytes), align: 0
+  Relative segment, address: CODE 00002A6C - 00002A80 (0x15 bytes), align: 0
   Segment part 36.            Intra module refs:   nwk_getLocalLinkID
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_setListenContext    000029D7        SMPL_LinkListen (nwk_api)
+           nwk_setListenContext    00002A6C        SMPL_LinkListen (nwk_api)
                XSTACK = 00000009 ( 00000000 )
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000029EC - 00002AF8 (0x10d bytes), align: 0
+  Relative segment, address: CODE 00002A81 - 00002B8D (0x10d bytes), align: 0
   Segment part 37.            Intra module refs:   nwk_processLink
            LOCAL                   ADDRESS         
            =====                   =======         
-           handleLinkRequest       000029EC 
+           handleLinkRequest       00002A81 
                calls direct
                XSTACK = 00000008 ( 00000012 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002AF9 - 00002B03 (0xb bytes), align: 0
+  Relative segment, address: CODE 00002B8E - 00002B98 (0xb bytes), align: 0
   Segment part 38.            Intra module refs:   smpl_send_link_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine7            00002AF9 
+           ?Subroutine7            00002B8E 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002B04 - 00002B0C (0x9 bytes), align: 0
+  Relative segment, address: CODE 00002B99 - 00002BA1 (0x9 bytes), align: 0
   Segment part 39.            Intra module refs:   ?Subroutine7
                                                    handleLinkRequest
                                                    smpl_send_link_reply
     -------------------------------------------------------------------------
 XDATA_I
-  Relative segment, address: XDATA 0000F792 - 0000F795 (0x4 bytes), align: 0
+  Relative segment, address: XDATA 0000F766 - 0000F769 (0x4 bytes), align: 0
   Segment part 14.            Intra module refs:   nwk_linkInit
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __Constant_1020304      0000F792 
+           __Constant_1020304      0000F766 
     -------------------------------------------------------------------------
 XDATA_ID
-  Relative segment, address: CODE 0000018E - 00000191 (0x4 bytes), align: 0
+  Relative segment, address: CODE 0000018F - 00000192 (0x4 bytes), align: 0
   Segment part 15.            Intra module refs:   __Constant_1020304
 
     *************************************************************************
@@ -2254,89 +2273,89 @@ XDATA_ID
   SEGMENTS IN THE MODULE
   ======================
 XDATA_Z
-  Relative segment, address: XDATA 0000F5F4 - 0000F5F6 (0x3 bytes), align: 0
+  Relative segment, address: XDATA 0000F5F5 - 0000F5F7 (0x3 bytes), align: 0
   Segment part 6.             Intra module refs:   Segment part 15
                                                    nwk_mgmtInit
            LOCAL                   ADDRESS         
            =====                   =======         
-           sSFMarker               0000F5F4 
+           sSFMarker               0000F5F5 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F5F7 - 0000F5F7 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5F8 - 0000F5F8 (0x1 bytes), align: 0
   Segment part 7.             Intra module refs:   nwk_mgmtInit
                                                    nwk_processMgmt
            LOCAL                   ADDRESS         
            =====                   =======         
-           sTid                    0000F5F7 
+           sTid                    0000F5F8 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002B0D - 00002B34 (0x28 bytes), align: 0
+  Relative segment, address: CODE 00002BA2 - 00002BC9 (0x28 bytes), align: 0
   Segment part 8.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_mgmtInit            00002B0D        nwk_nwkInit (nwk)
+           nwk_mgmtInit            00002BA2        nwk_nwkInit (nwk)
                calls direct
                XSTACK = 00000000 ( 0000000B )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002B35 - 00002B39 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00002BCA - 00002BCE (0x5 bytes), align: 0
   Segment part 9.             Intra module refs:   nwk_mgmtInit
                                                    nwk_processMgmt
                                                    nwk_resetSFMarker
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00002B35 
+           ?Subroutine0            00002BCA 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002B3A - 00002BA3 (0x6a bytes), align: 0
+  Relative segment, address: CODE 00002BCF - 00002C38 (0x6a bytes), align: 0
   Segment part 10.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_processMgmt         00002B3A        Segment part 7 (nwk_frame)
+           nwk_processMgmt         00002BCF        Segment part 7 (nwk_frame)
                calls direct, is indirectly called
                XSTACK = 00000000 ( 0000000B )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002BA4 - 00002C6C (0xc9 bytes), align: 0
+  Relative segment, address: CODE 00002C39 - 00002D01 (0xc9 bytes), align: 0
   Segment part 11.            Intra module refs:   nwk_processMgmt
            LOCAL                   ADDRESS         
            =====                   =======         
-           send_poll_reply         00002BA4 
+           send_poll_reply         00002C39 
                calls direct
                XSTACK = 00000009 ( 0000000B )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002C6D - 00002C70 (0x4 bytes), align: 0
+  Relative segment, address: CODE 00002D02 - 00002D05 (0x4 bytes), align: 0
   Segment part 12.            Intra module refs:   send_poll_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            00002C6D 
+           ?Subroutine2            00002D02 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002C71 - 00002C76 (0x6 bytes), align: 0
+  Relative segment, address: CODE 00002D06 - 00002D0B (0x6 bytes), align: 0
   Segment part 13.            Intra module refs:   ?Subroutine2
                                                    nwk_processMgmt
                                                    send_poll_reply
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002C77 - 00002C77 (0x1 bytes), align: 0
+  Relative segment, address: CODE 00002D0C - 00002D0C (0x1 bytes), align: 0
   Segment part 14.            Intra module refs:   send_poll_reply
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine1            00002C77 
+           ?Subroutine1            00002D0C 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002C78 - 00002C81 (0xa bytes), align: 0
+  Relative segment, address: CODE 00002D0D - 00002D16 (0xa bytes), align: 0
   Segment part 15.            Intra module refs:   ?Subroutine1
                                                    nwk_resetSFMarker
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002C82 - 00002C8F (0xe bytes), align: 0
+  Relative segment, address: CODE 00002D17 - 00002D24 (0xe bytes), align: 0
   Segment part 16.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_resetSFMarker       00002C82        smpl_send_join_reply (nwk_join)
+           nwk_resetSFMarker       00002D17        smpl_send_join_reply (nwk_join)
                XSTACK = 00000000 ( 00000009 )
                ISTACK = 00000000 ( 00000001 )
 
@@ -2348,28 +2367,28 @@ NEAR_CODE
   SEGMENTS IN THE MODULE
   ======================
 XDATA_Z
-  Relative segment, address: XDATA 0000F5F8 - 0000F5F8 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F5F9 - 0000F5F9 (0x1 bytes), align: 0
   Segment part 6.             Intra module refs:   nwk_pingInit
                                                    nwk_processPing
            LOCAL                   ADDRESS         
            =====                   =======         
-           sTid                    0000F5F8 
+           sTid                    0000F5F9 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002C90 - 00002CA0 (0x11 bytes), align: 0
+  Relative segment, address: CODE 00002D25 - 00002D35 (0x11 bytes), align: 0
   Segment part 7.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_pingInit            00002C90        nwk_nwkInit (nwk)
+           nwk_pingInit            00002D25        nwk_nwkInit (nwk)
                calls direct
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002CA1 - 00002D3A (0x9a bytes), align: 0
+  Relative segment, address: CODE 00002D36 - 00002DCF (0x9a bytes), align: 0
   Segment part 10.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_processPing         00002CA1        Segment part 7 (nwk_frame)
+           nwk_processPing         00002D36        Segment part 7 (nwk_frame)
                calls direct, is indirectly called
                XSTACK = 00000000 ( 0000000D )
 
@@ -2381,18 +2400,18 @@ NEAR_CODE
   SEGMENTS IN THE MODULE
   ======================
 NEAR_CODE
-  Relative segment, address: CODE 00002D3B - 00002D3B (0x1 bytes), align: 0
+  Relative segment, address: CODE 00002DD0 - 00002DD0 (0x1 bytes), align: 0
   Segment part 6.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_securityInit        00002D3B        nwk_nwkInit (nwk)
+           nwk_securityInit        00002DD0        nwk_nwkInit (nwk)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002D3C - 00002D3E (0x3 bytes), align: 0
+  Relative segment, address: CODE 00002DD1 - 00002DD3 (0x3 bytes), align: 0
   Segment part 7.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           nwk_processSecurity     00002D3C        Segment part 7 (nwk_frame)
+           nwk_processSecurity     00002DD1        Segment part 7 (nwk_frame)
                is indirectly called
 
     *************************************************************************
@@ -2403,53 +2422,53 @@ NEAR_CODE
   SEGMENTS IN THE MODULE
   ======================
 XDATA_Z
-  Relative segment, address: XDATA 0000F5F9 - 0000F618 (0x20 bytes), align: 0
+  Relative segment, address: XDATA 0000F5FA - 0000F619 (0x20 bytes), align: 0
   Segment part 6.             Intra module refs:   simpliciti_sync_decode_ed_cmd_callback
                                                    simpliciti_sync_get_data_callback
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           simpliciti_data         0000F5F9        main (main_AP_Async_Listen_autoack)
+           simpliciti_data         0000F5FA        main (main_AP_Async_Listen_autoack)
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F619 - 0000F619 (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F61A - 0000F61A (0x1 bytes), align: 0
   Segment part 7.             Intra module refs:   simpliciti_sync_decode_ed_cmd_callback
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            simpliciti_reply_count
-                                   0000F619        main (main_AP_Async_Listen_autoack)
+                                   0000F61A        main (main_AP_Async_Listen_autoack)
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F61A - 0000F61A (0x1 bytes), align: 0
+  Relative segment, address: XDATA 0000F61B - 0000F61B (0x1 bytes), align: 0
   Segment part 8.             Intra module refs:   simpliciti_sync_get_data_callback
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            simpliciti_send_data_length
-                                   0000F61A        main (main_AP_Async_Listen_autoack)
+                                   0000F61B        main (main_AP_Async_Listen_autoack)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002D3F - 00002D64 (0x26 bytes), align: 0
+  Relative segment, address: CODE 00002DD4 - 00002DF9 (0x26 bytes), align: 0
   Segment part 9.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            simpliciti_sync_decode_ed_cmd_callback
-                                   00002D3F        main (main_AP_Async_Listen_autoack)
+                                   00002DD4        main (main_AP_Async_Listen_autoack)
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002D65 - 00002D69 (0x5 bytes), align: 0
+  Relative segment, address: CODE 00002DFA - 00002DFE (0x5 bytes), align: 0
   Segment part 10.            Intra module refs:   simpliciti_sync_decode_ed_cmd_callback
                                                    simpliciti_sync_get_data_callback
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00002D65 
+           ?Subroutine0            00002DFA 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002D6A - 00002DDF (0x76 bytes), align: 0
+  Relative segment, address: CODE 00002DFF - 00002E74 (0x76 bytes), align: 0
   Segment part 11.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            simpliciti_sync_get_data_callback
-                                   00002D6A        main (main_AP_Async_Listen_autoack)
+                                   00002DFF        main (main_AP_Async_Listen_autoack)
                ISTACK = 00000000 ( 00000002 )
 
     *************************************************************************
@@ -2569,215 +2588,211 @@ SFR_AN
            U1GCR                   000000FC 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F61B - 0000F67E (0x64 bytes), align: 0
-  Segment part 28.            Intra module refs:   ?Subroutine3
+  Relative segment, address: XDATA 0000F61C - 0000F64D (0x32 bytes), align: 0
+  Segment part 28.            Intra module refs:   ?Subroutine7
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartRxBuffer            0000F61B        main (main_AP_Async_Listen_autoack)
+           uartRxBuffer            0000F61C        main (main_AP_Async_Listen_autoack)
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F67F - 0000F6E2 (0x64 bytes), align: 0
-  Segment part 29.            Intra module refs:   ?Subroutine4
-                                                   uartStartTxForIsr
+  Relative segment, address: XDATA 0000F64E - 0000F67F (0x32 bytes), align: 0
+  Segment part 29.            Intra module refs:   ?Subroutine3
+                                                   ?Subroutine4
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartTxBuffer            0000F67F        main (main_AP_Async_Listen_autoack)
+           uartTxBuffer            0000F64E        uart_decode_cmd_callback (uart_app)
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F6E3 - 0000F6E4 (0x2 bytes), align: 0
-  Segment part 30.            Intra module refs:   ?Subroutine3
-                                                   ?Subroutine8
+  Relative segment, address: XDATA 0000F680 - 0000F681 (0x2 bytes), align: 0
+  Segment part 30.            Intra module refs:   ?Subroutine5
+                                                   ?Subroutine6
                                                    UART0_RX_ISR
-                                                   UART1_RX_ISR
                                                    uartStartRxForIsr
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartRxIndex             0000F6E3        main (main_AP_Async_Listen_autoack)
+           uartRxIndex             0000F680        main (main_AP_Async_Listen_autoack)
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F6E5 - 0000F6E6 (0x2 bytes), align: 0
-  Segment part 31.            Intra module refs:   ?Subroutine5
-                                                   ?Subroutine6
+  Relative segment, address: XDATA 0000F682 - 0000F683 (0x2 bytes), align: 0
+  Segment part 31.            Intra module refs:   ?Subroutine3
+                                                   ?Subroutine4
+                                                   UART0_TX_ISR
+                                                   UART1_TX_ISR
                                                    uartStartTxForIsr
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartTxIndex             0000F6E5 
+           uartTxIndex             0000F682 
     -------------------------------------------------------------------------
 XDATA_Z
-  Relative segment, address: XDATA 0000F6E7 - 0000F6E8 (0x2 bytes), align: 0
-  Segment part 32.
+  Relative segment, address: XDATA 0000F684 - 0000F685 (0x2 bytes), align: 0
+  Segment part 32.            Intra module refs:   UART1_TX_ISR
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartProtConfig          0000F6E7        start_gps_at_uart (uart_app)
+           uartTxLength            0000F684        uart_decode_cmd_callback (uart_app)
     -------------------------------------------------------------------------
-NEAR_CODE
-  Relative segment, address: CODE 00002DE0 - 00002E1C (0x3d bytes), align: 0
+XDATA_Z
+  Relative segment, address: XDATA 0000F686 - 0000F687 (0x2 bytes), align: 0
   Segment part 33.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartMapPort             00002DE0        start_gps_at_uart (uart_app)
+           uartProtConfig          0000F686        start_gps_at_uart (uart_app)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002E1D - 00002E34 (0x18 bytes), align: 0
+  Relative segment, address: CODE 00002E75 - 00002EB1 (0x3d bytes), align: 0
   Segment part 34.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartInitBitrate         00002E1D        start_gps_at_uart (uart_app)
+           uartMapPort             00002E75        start_gps_at_uart (uart_app)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002E35 - 00002EE9 (0xb5 bytes), align: 0
+  Relative segment, address: CODE 00002EB2 - 00002EC9 (0x18 bytes), align: 0
   Segment part 35.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartInitProtocol        00002E35        start_gps_at_uart (uart_app)
-               ISTACK = 00000000 ( 00000002 )
+           uartInitBitrate         00002EB2        start_gps_at_uart (uart_app)
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002EEA - 00002F11 (0x28 bytes), align: 0
+  Relative segment, address: CODE 00002ECA - 00002F7E (0xb5 bytes), align: 0
   Segment part 36.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartStartTxForIsr       00002EEA        main (main_AP_Async_Listen_autoack)
+           uartInitProtocol        00002ECA        start_gps_at_uart (uart_app)
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002F12 - 00002F13 (0x2 bytes), align: 0
-  Segment part 37.            Intra module refs:   uartStartRxForIsr
+  Relative segment, address: CODE 00002F7F - 00002FA2 (0x24 bytes), align: 0
+  Segment part 37.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           uartStartTxForIsr       00002F7F        uart_decode_cmd_callback (uart_app)
+               ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00002FA3 - 00002FA4 (0x2 bytes), align: 0
+  Segment part 38.            Intra module refs:   uartStartRxForIsr
                                                    uartStartTxForIsr
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine0            00002F12 
+           ?Subroutine0            00002FA3 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002F14 - 00002F18 (0x5 bytes), align: 0
-  Segment part 38.            Intra module refs:   ?Subroutine0
+  Relative segment, address: CODE 00002FA5 - 00002FA9 (0x5 bytes), align: 0
+  Segment part 39.            Intra module refs:   ?Subroutine0
                                                    uartInitProtocol
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002F19 - 00002F3E (0x26 bytes), align: 0
-  Segment part 39.            Intra module refs:   UART0_TX_ISR::??INTVEC 59
+  Relative segment, address: CODE 00002FAA - 00002FCC (0x23 bytes), align: 0
+  Segment part 40.            Intra module refs:   uartStartTxForIsr
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine3            00002FAA 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00002FCD - 00002FFB (0x2f bytes), align: 0
+  Segment part 41.            Intra module refs:   UART0_TX_ISR::??INTVEC 59
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           UART0_TX_ISR            00002F19 
+           UART0_TX_ISR            00002FCD 
                interrupt function
-               ISTACK = 00000000 ( 00000006 )
+               ISTACK = 00000000 ( 00000008 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002F3F - 00002F44 (0x6 bytes), align: 0
-  Segment part 40.            Intra module refs:   UART0_TX_ISR
-                                                   UART1_TX_ISR
+  Relative segment, address: CODE 00002FFC - 00003010 (0x15 bytes), align: 0
+  Segment part 42.            Intra module refs:   UART0_RX_ISR
+                                                   UART0_TX_ISR
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine2            00002F3F 
+           ?Subroutine1            00002FFC 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002F45 - 00002F4E (0xa bytes), align: 0
-  Segment part 41.            Intra module refs:   UART0_RX_ISR
-                                                   UART1_RX_ISR
-           LOCAL                   ADDRESS         
-           =====                   =======         
-           ?Subroutine1            00002F45 
-    -------------------------------------------------------------------------
-NEAR_CODE
-  Relative segment, address: CODE 00002F4F - 00002F59 (0xb bytes), align: 0
-  Segment part 42.            Intra module refs:   ?Subroutine1
-                                                   ?Subroutine2
-    -------------------------------------------------------------------------
-NEAR_CODE
-  Relative segment, address: CODE 00002F5A - 00002F81 (0x28 bytes), align: 0
+  Relative segment, address: CODE 00003011 - 00003049 (0x39 bytes), align: 0
   Segment part 43.            Intra module refs:   UART1_TX_ISR::??INTVEC 115
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           UART1_TX_ISR            00002F5A 
+           UART1_TX_ISR            00003011 
                interrupt function
-               ISTACK = 00000000 ( 00000006 )
+               calls direct
+               ISTACK = 00000000 ( 00000011 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002F82 - 00002F88 (0x7 bytes), align: 0
-  Segment part 44.            Intra module refs:   UART0_TX_ISR
+  Relative segment, address: CODE 0000304A - 0000304E (0x5 bytes), align: 0
+  Segment part 44.            Intra module refs:   UART1_RX_ISR
                                                    UART1_TX_ISR
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine6            00002F82 
+           ?Subroutine2            0000304A 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002F89 - 00002F92 (0xa bytes), align: 0
+  Relative segment, address: CODE 0000304F - 00003065 (0x17 bytes), align: 0
   Segment part 45.            Intra module refs:   UART0_TX_ISR
                                                    UART1_TX_ISR
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine5            00002F89 
+           ?Subroutine4            0000304F 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002F93 - 00002FA0 (0xe bytes), align: 0
-  Segment part 46.            Intra module refs:   UART0_TX_ISR
-                                                   UART1_TX_ISR
-           LOCAL                   ADDRESS         
-           =====                   =======         
-           ?Subroutine4            00002F93 
-    -------------------------------------------------------------------------
-NEAR_CODE
-  Relative segment, address: CODE 00002FA1 - 00002FC0 (0x20 bytes), align: 0
-  Segment part 47.
+  Relative segment, address: CODE 00003066 - 00003085 (0x20 bytes), align: 0
+  Segment part 46.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           uartStartRxForIsr       00002FA1        main (main_AP_Async_Listen_autoack)
+           uartStartRxForIsr       00003066        main (main_AP_Async_Listen_autoack)
                ISTACK = 00000000 ( 00000002 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002FC1 - 00002FF2 (0x32 bytes), align: 0
-  Segment part 48.            Intra module refs:   UART0_RX_ISR::??INTVEC 19
+  Relative segment, address: CODE 00003086 - 000030BF (0x3a bytes), align: 0
+  Segment part 47.            Intra module refs:   UART0_RX_ISR::??INTVEC 19
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           UART0_RX_ISR            00002FC1 
+           UART0_RX_ISR            00003086 
                interrupt function
-               ISTACK = 00000000 ( 00000008 )
+               ISTACK = 00000000 ( 00000009 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002FF3 - 00002FF5 (0x3 bytes), align: 0
-  Segment part 49.            Intra module refs:   UART0_RX_ISR
+  Relative segment, address: CODE 000030C0 - 000030C2 (0x3 bytes), align: 0
+  Segment part 48.            Intra module refs:   UART0_RX_ISR
                                                    UART1_RX_ISR
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine8            00002FF3 
+           ?Subroutine6            000030C0 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002FF6 - 00002FFE (0x9 bytes), align: 0
-  Segment part 50.            Intra module refs:   ?Subroutine5
-                                                   ?Subroutine8
+  Relative segment, address: CODE 000030C3 - 000030CB (0x9 bytes), align: 0
+  Segment part 49.            Intra module refs:   ?Subroutine6
+                                                   UART0_TX_ISR
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00002FFF - 00003036 (0x38 bytes), align: 0
-  Segment part 51.            Intra module refs:   UART1_RX_ISR::??INTVEC 27
+  Relative segment, address: CODE 000030CC - 000030FE (0x33 bytes), align: 0
+  Segment part 50.            Intra module refs:   UART1_RX_ISR::??INTVEC 27
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           UART1_RX_ISR            00002FFF 
+           UART1_RX_ISR            000030CC 
                interrupt function
-               ISTACK = 00000000 ( 00000008 )
+               calls direct
+               ISTACK = 00000000 ( 00000010 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00003037 - 00003052 (0x1c bytes), align: 0
+  Relative segment, address: CODE 000030FF - 00003109 (0xb bytes), align: 0
+  Segment part 51.            Intra module refs:   UART0_RX_ISR
+                                                   UART1_RX_ISR
+           LOCAL                   ADDRESS         
+           =====                   =======         
+           ?Subroutine7            000030FF 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 0000310A - 00003118 (0xf bytes), align: 0
   Segment part 52.            Intra module refs:   UART0_RX_ISR
                                                    UART1_RX_ISR
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine3            00003037 
+           ?Subroutine5            0000310A 
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 00003053 - 0000305C (0xa bytes), align: 0
-  Segment part 53.            Intra module refs:   ?Subroutine3
-                                                   ?Subroutine6
+  Relative segment, address: CODE 00003119 - 00003125 (0xd bytes), align: 0
+  Segment part 53.            Intra module refs:   ?Subroutine4
+                                                   ?Subroutine5
            LOCAL                   ADDRESS         
            =====                   =======         
-           ?Subroutine9            00003053 
-    -------------------------------------------------------------------------
-NEAR_CODE
-  Relative segment, address: CODE 0000305D - 0000306A (0xe bytes), align: 0
-  Segment part 54.            Intra module refs:   ?Subroutine3
-                                                   ?Subroutine4
-           LOCAL                   ADDRESS         
-           =====                   =======         
-           ?Subroutine7            0000305D 
+           ?Subroutine8            00003119 
     -------------------------------------------------------------------------
 INTVEC
   Common segment, address: CODE 00000000 - 00000015 (0x16 bytes), align: 0
@@ -2818,14 +2833,103 @@ INTVEC
 
   SEGMENTS IN THE MODULE
   ======================
-NEAR_CODE
-  Relative segment, address: CODE 0000306B - 00003095 (0x2b bytes), align: 0
-  Segment part 6.
+XDATA_Z
+  Relative segment, address: XDATA 0000F688 - 0000F6B9 (0x32 bytes), align: 0
+  Segment part 14.            Intra module refs:   uart_decode_cmd_callback
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           start_gps_at_uart       0000306B        main (main_AP_Async_Listen_autoack)
+           uartCommand             0000F688        main (main_AP_Async_Listen_autoack)
+    -------------------------------------------------------------------------
+XDATA_Z
+  Relative segment, address: XDATA 0000F6BA - 0000F6BB (0x2 bytes), align: 0
+  Segment part 15.            Intra module refs:   uart_decode_cmd_callback
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           uartCommandSize         0000F6BA        main (main_AP_Async_Listen_autoack)
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000F76A - 0000F771 (0x8 bytes), align: 0
+  Segment part 6.             Intra module refs:   uart_decode_cmd_callback
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000F772 - 0000F77B (0xa bytes), align: 0
+  Segment part 8.             Intra module refs:   uart_decode_cmd_callback
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000F77C - 0000F783 (0x8 bytes), align: 0
+  Segment part 10.            Intra module refs:   uart_decode_cmd_callback
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000F784 - 0000F78D (0xa bytes), align: 0
+  Segment part 12.            Intra module refs:   uart_decode_cmd_callback
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000F78E - 0000F793 (0x6 bytes), align: 0
+  Segment part 16.            Intra module refs:   uart_decode_cmd_callback
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           HelloCmd                0000F78E 
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000F794 - 0000F7A1 (0xe bytes), align: 0
+  Segment part 18.            Intra module refs:   uart_decode_cmd_callback
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           GetLockFlagCmd          0000F794 
+    -------------------------------------------------------------------------
+XDATA_I
+  Relative segment, address: XDATA 0000F7A2 - 0000F7B3 (0x12 bytes), align: 0
+  Segment part 20.            Intra module refs:   uart_decode_cmd_callback
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           GetPanicStatus          0000F7A2 
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00003126 - 00003150 (0x2b bytes), align: 0
+  Segment part 22.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           start_gps_at_uart       00003126        main (main_AP_Async_Listen_autoack)
                calls direct
                ISTACK = 00000000 ( 00000002 )
+    -------------------------------------------------------------------------
+NEAR_CODE
+  Relative segment, address: CODE 00003151 - 0000324C (0xfc bytes), align: 0
+  Segment part 23.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           uart_decode_cmd_callback
+                                   00003151        main (main_AP_Async_Listen_autoack)
+               calls direct
+               XSTACK = 00000000 ( 0000000B )
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 00000193 - 0000019A (0x8 bytes), align: 0
+  Segment part 7.             Intra module refs:   Segment part 6
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 0000019B - 000001A4 (0xa bytes), align: 0
+  Segment part 9.             Intra module refs:   Segment part 8
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000001A5 - 000001AC (0x8 bytes), align: 0
+  Segment part 11.            Intra module refs:   Segment part 10
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000001AD - 000001B6 (0xa bytes), align: 0
+  Segment part 13.            Intra module refs:   Segment part 12
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000001B7 - 000001BC (0x6 bytes), align: 0
+  Segment part 17.            Intra module refs:   HelloCmd
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000001BD - 000001CA (0xe bytes), align: 0
+  Segment part 19.            Intra module refs:   GetLockFlagCmd
+    -------------------------------------------------------------------------
+XDATA_ID
+  Relative segment, address: CODE 000001CB - 000001DC (0x12 bytes), align: 0
+  Segment part 21.            Intra module refs:   GetPanicStatus
 
     *************************************************************************
 
@@ -2867,7 +2971,8 @@ CSTART
   Segment part 11.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __INIT_XDATA_Z          00000094        mrfiDmaCfg (mrfi)
+           __INIT_XDATA_Z          00000094        Panic_Flag (main_AP_Async_Listen_autoack)
+                                                   mrfiDmaCfg (mrfi)
                                                    mrfiIncomingPacket (mrfi)
                                                    mrfiRadioState (mrfi)
                                                    mrfiRxFilterEnabled (mrfi)
@@ -2908,18 +3013,29 @@ CSTART
                                                    spCallback (nwk_frame)
                                                    spCallback (nwk_join)
                                                    spSandFContext (nwk_join)
+                                                   uartCommand (uart_app)
+                                                   uartCommandSize (uart_app)
                                                    uartProtConfig (uart)
                                                    uartRxBuffer (uart)
                                                    uartRxIndex (uart)
                                                    uartTxBuffer (uart)
                                                    uartTxIndex (uart)
+                                                   uartTxLength (uart)
     -------------------------------------------------------------------------
 CSTART
   Relative segment, address: CODE 000000A4 - 000000CC (0x29 bytes), align: 0
   Segment part 28.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __INIT_XDATA_I          000000A4        __Constant_0 (nwk_join)
+           __INIT_XDATA_I          000000A4        GetLockFlagCmd (uart_app)
+                                                   GetPanicStatus (uart_app)
+                                                   HelloCmd (uart_app)
+                                                   Lock_Flag (main_AP_Async_Listen_autoack)
+                                                   Segment part 10 (uart_app)
+                                                   Segment part 12 (uart_app)
+                                                   Segment part 6 (uart_app)
+                                                   Segment part 8 (uart_app)
+                                                   __Constant_0 (nwk_join)
                                                    __Constant_1020304 (nwk_link)
                                                    __Constant_5060708 (nwk_join)
                                                    __Constant_deadbeef (nwk_join)
@@ -3075,6 +3191,7 @@ VREG
                                                    send_poll_reply (nwk_mgmt)
                                                    smpl_send_join_reply (nwk_join)
                                                    smpl_send_link_reply (nwk_link)
+                                                   uart_decode_cmd_callback (uart_app)
     -------------------------------------------------------------------------
 XSP
   Relative segment, address: DATA 00000010 - 00000011 (0x2 bytes), align: 0
@@ -3117,11 +3234,11 @@ XSP
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000192 - 000001A6 (0x15 bytes), align: 0
+  Relative segment, address: CODE 000001DD - 000001F1 (0x15 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?L_EQ_X                 00000192        nwk_joinInit (nwk_join)
+           ?L_EQ_X                 000001DD        nwk_joinInit (nwk_join)
                                                    nwk_linkInit (nwk_link)
                                                    nwk_setLinkToken (nwk_link)
                                                    smpl_send_join_reply (nwk_join)
@@ -3133,11 +3250,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000001A7 - 000001B5 (0xf bytes), align: 0
+  Relative segment, address: CODE 000001F2 - 00000200 (0xf bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?L_MOV_X                000001A7        nwk_getLinkToken (nwk_link)
+           ?L_MOV_X                000001F2        nwk_getLinkToken (nwk_link)
                                                    nwk_getNumObjectFromMsg (nwk)
                                                    nwk_joinInit (nwk_join)
                                                    nwk_linkInit (nwk_link)
@@ -3151,11 +3268,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000001B6 - 000001C4 (0xf bytes), align: 0
+  Relative segment, address: CODE 00000201 - 0000020F (0xf bytes), align: 0
   Segment part 2.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?L_MOV_TO_X             000001B6        nwk_getLinkToken (nwk_link)
+           ?L_MOV_TO_X             00000201        nwk_getLinkToken (nwk_link)
                                                    nwk_getNumObjectFromMsg (nwk)
                                                    nwk_joinInit (nwk_join)
                                                    nwk_linkInit (nwk_link)
@@ -3167,12 +3284,12 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000001C5 - 000001D1 (0xd bytes), align: 0
+  Relative segment, address: CODE 00000210 - 0000021C (0xd bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            ?MOVE_LONG8_XDATA_IDATA
-                                   000001C5        ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
+                                   00000210        ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?MOVE_LONG8_XDATA_XDATA
@@ -3180,12 +3297,12 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000001D2 - 000001F2 (0x21 bytes), align: 0
+  Relative segment, address: CODE 0000021D - 0000023D (0x21 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            ?MOVE_LONG8_XDATA_XDATA
-                                   000001D2        ?PUSH_XSTACK8_X (?PUSH_XSTACK8_X)
+                                   0000021D        ?PUSH_XSTACK8_X (?PUSH_XSTACK8_X)
                                                    MRFI_Receive (mrfi)
 
     -------------------------------------------------------------------------
@@ -3194,18 +3311,18 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000001F3 - 00000233 (0x41 bytes), align: 0
+  Relative segment, address: CODE 0000023E - 0000027E (0x41 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?S_DIV_MOD              0000022C        Mrfi_CalculateRssi (mrfi)
+           ?S_DIV_MOD              00000277        Mrfi_CalculateRssi (mrfi)
     -------------------------------------------------------------------------
 RCODE
-  Relative segment, address: CODE 00000234 - 0000028C (0x59 bytes), align: 0
+  Relative segment, address: CODE 0000027F - 000002D7 (0x59 bytes), align: 0
   Segment part 1.             Intra module refs:   ?S_DIV_MOD
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?US_DIV_MOD             00000234 
+           ?US_DIV_MOD             0000027F 
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?US_SHR
@@ -3213,14 +3330,14 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000028D - 0000028F (0x3 bytes), align: 0
+  Relative segment, address: CODE 000002D8 - 000002DA (0x3 bytes), align: 0
   Segment part 1.             Intra module refs:   Segment part 2
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?US_SHR                 0000028D        Mrfi_DelayUsec (mrfi)
+           ?US_SHR                 000002D8        Mrfi_DelayUsec (mrfi)
     -------------------------------------------------------------------------
 RCODE
-  Relative segment, address: CODE 00000290 - 0000029B (0xc bytes), align: 0
+  Relative segment, address: CODE 000002DB - 000002E6 (0xc bytes), align: 0
   Segment part 2.             Intra module refs:   ?US_SHR
 
     -------------------------------------------------------------------------
@@ -3229,11 +3346,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000029C - 000002B1 (0x16 bytes), align: 0
+  Relative segment, address: CODE 000002E7 - 000002FC (0x16 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?ALLOC_XSTACK8          0000029C        BSP_Init (bsp)
+           ?ALLOC_XSTACK8          000002E7        BSP_Init (bsp)
                                                    SMPL_Receive (nwk_api)
                                                    SMPL_SendOpt (nwk_api)
                                                    dispatchFrame (nwk_frame)
@@ -3258,11 +3375,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000002B2 - 000002CB (0x1a bytes), align: 0
+  Relative segment, address: CODE 000002FD - 00000316 (0x1a bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?DEALLOC_XSTACK8        000002B2        ?Subroutine0 (nwk_link)
+           ?DEALLOC_XSTACK8        000002FD        ?Subroutine0 (nwk_link)
                                                    ?Subroutine1 (nwk_frame)
                                                    BSP_Init (bsp)
                                                    MRFI_Init (mrfi)
@@ -3301,6 +3418,7 @@ RCODE
                                                    send_poll_reply (nwk_mgmt)
                                                    smpl_send_join_reply (nwk_join)
                                                    smpl_send_link_reply (nwk_link)
+                                                   uart_decode_cmd_callback (uart_app)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?ADD_XSTACK_DISP8
@@ -3308,11 +3426,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000002CC - 000002E6 (0x1b bytes), align: 0
+  Relative segment, address: CODE 00000317 - 00000331 (0x1b bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?ADD_XSTACK_DISP0_8     000002CC        ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
+           ?ADD_XSTACK_DISP0_8     00000317        ?PUSH_XSTACK_I (?PUSH_XSTACK_I)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?XSTACK_DISP8
@@ -3320,11 +3438,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000002E7 - 000002F0 (0xa bytes), align: 0
+  Relative segment, address: CODE 00000332 - 0000033B (0xa bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?XSTACK_DISP0_8         000002E7        SMPL_Receive (nwk_api)
+           ?XSTACK_DISP0_8         00000332        SMPL_Receive (nwk_api)
                                                    SMPL_SendOpt (nwk_api)
                                                    dispatchFrame (nwk_frame)
                                                    handleLinkRequest (nwk_link)
@@ -3350,11 +3468,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000002F1 - 000002F2 (0x2 bytes), align: 0
+  Relative segment, address: CODE 0000033C - 0000033D (0x2 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?CALL_IND               000002F1        dispatchFrame (nwk_frame)
+           ?CALL_IND               0000033C        dispatchFrame (nwk_frame)
                                                    smpl_send_join_reply (nwk_join)
 
     -------------------------------------------------------------------------
@@ -3363,11 +3481,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000002F3 - 00000352 (0x60 bytes), align: 0
+  Relative segment, address: CODE 0000033E - 0000039D (0x60 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?FUNC_ENTER_XDATA       000002F3        MRFI_DelayMs (mrfi)
+           ?FUNC_ENTER_XDATA       0000033E        MRFI_DelayMs (mrfi)
                                                    MRFI_Init (mrfi)
                                                    MRFI_ReplyDelay (mrfi)
                                                    MRFI_RxAddrIsFiltered (mrfi)
@@ -3429,6 +3547,7 @@ RCODE
                                                    send_poll_reply (nwk_mgmt)
                                                    smpl_send_join_reply (nwk_join)
                                                    smpl_send_link_reply (nwk_link)
+                                                   uart_decode_cmd_callback (uart_app)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?FUNC_LEAVE_XDATA
@@ -3436,11 +3555,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000353 - 0000038A (0x38 bytes), align: 0
+  Relative segment, address: CODE 0000039E - 000003D5 (0x38 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?FUNC_LEAVE_XDATA       00000353        ?Subroutine0 (mrfi)
+           ?FUNC_LEAVE_XDATA       0000039E        ?Subroutine0 (mrfi)
                                                    ?Subroutine0 (nwk_api)
                                                    ?Subroutine0 (nwk_join)
                                                    ?Subroutine0 (nwk_mgmt)
@@ -3479,6 +3598,7 @@ RCODE
                                                    send_poll_reply (nwk_mgmt)
                                                    smpl_send_join_reply (nwk_join)
                                                    smpl_send_link_reply (nwk_link)
+                                                   uart_decode_cmd_callback (uart_app)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?INTERRUPT_ENTER_XSP
@@ -3486,11 +3606,13 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000038B - 000003E9 (0x5f bytes), align: 0
+  Relative segment, address: CODE 000003D6 - 00000434 (0x5f bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?INTERRUPT_ENTER_XSP    0000038B        MRFI_RfIsr (mrfi)
+           ?INTERRUPT_ENTER_XSP    000003D6        MRFI_RfIsr (mrfi)
+                                                   UART1_RX_ISR (uart)
+                                                   UART1_TX_ISR (uart)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?INTERRUPT_LEAVE_XSP
@@ -3498,11 +3620,12 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 000003EA - 00000439 (0x50 bytes), align: 0
+  Relative segment, address: CODE 00000435 - 00000484 (0x50 bytes), align: 0
   Segment part 1.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?INTERRUPT_LEAVE_XSP    000003EA        MRFI_RfIsr (mrfi)
+           ?INTERRUPT_LEAVE_XSP    00000435        ?Subroutine2 (uart)
+                                                   MRFI_RfIsr (mrfi)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?PUSH_XSTACK_I
@@ -3510,11 +3633,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000043A - 0000043D (0x4 bytes), align: 0
+  Relative segment, address: CODE 00000485 - 00000488 (0x4 bytes), align: 0
   Segment part 2.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?PUSH_XSTACK_I_TWO      0000043A        MRFI_Init (mrfi)
+           ?PUSH_XSTACK_I_TWO      00000485        MRFI_Init (mrfi)
                                                    MRFI_RfIsr (mrfi)
                                                    Mrfi_RxModeOn (mrfi)
                                                    SMPL_Receive (nwk_api)
@@ -3548,13 +3671,14 @@ RCODE
                                                    nwk_sendAckReply (nwk_frame)
                                                    smpl_send_join_reply (nwk_join)
                                                    smpl_send_link_reply (nwk_link)
+                                                   uart_decode_cmd_callback (uart_app)
     -------------------------------------------------------------------------
 RCODE
-  Relative segment, address: CODE 0000043E - 0000044A (0xd bytes), align: 0
+  Relative segment, address: CODE 00000489 - 00000495 (0xd bytes), align: 0
   Segment part 4.             Intra module refs:   ?PUSH_XSTACK_I_TWO
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?PUSH_XSTACK_I          0000043E 
+           ?PUSH_XSTACK_I          00000489 
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?PUSH_XSTACK8_X
@@ -3562,18 +3686,19 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 0000044B - 0000044E (0x4 bytes), align: 0
+  Relative segment, address: CODE 00000496 - 00000499 (0x4 bytes), align: 0
   Segment part 3.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?PUSH_XSTACK8_X_TWO     0000044B        main (main_AP_Async_Listen_autoack)
+           ?PUSH_XSTACK8_X_TWO     00000496        main (main_AP_Async_Listen_autoack)
+                                                   uart_decode_cmd_callback (uart_app)
     -------------------------------------------------------------------------
 RCODE
-  Relative segment, address: CODE 0000044F - 00000477 (0x29 bytes), align: 0
+  Relative segment, address: CODE 0000049A - 000004C2 (0x29 bytes), align: 0
   Segment part 5.             Intra module refs:   ?PUSH_XSTACK8_X_TWO
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?PUSH_XSTACK8_X         0000044F 
+           ?PUSH_XSTACK8_X         0000049A 
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?UC_SWITCH_DENSE
@@ -3581,22 +3706,22 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 RCODE
-  Relative segment, address: CODE 00000478 - 0000047D (0x6 bytes), align: 0
+  Relative segment, address: CODE 000004C3 - 000004C8 (0x6 bytes), align: 0
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ?UC_SWITCH_DENSE        00000478        handleLinkRequest (nwk_link)
+           ?UC_SWITCH_DENSE        000004C3        handleLinkRequest (nwk_link)
                                                    nwk_getNumObjectFromMsg (nwk)
                                                    nwk_putNumObjectIntoMsg (nwk)
                                                    simpliciti_sync_decode_ed_cmd_callback (rfsimpliciti)
                                                    simpliciti_sync_get_data_callback (rfsimpliciti)
     -------------------------------------------------------------------------
 RCODE
-  Relative segment, address: CODE 0000047E - 000004AC (0x2f bytes), align: 0
+  Relative segment, address: CODE 000004C9 - 000004F7 (0x2f bytes), align: 0
   Segment part 2.             Intra module refs:   ?UC_SWITCH_DENSE
     -------------------------------------------------------------------------
 RCODE
-  Relative segment, address: CODE 000004AD - 000004AD (0x1 bytes), align: 0
+  Relative segment, address: CODE 000004F8 - 000004F8 (0x1 bytes), align: 0
   Segment part 4.             Intra module refs:   ?UC_SWITCH_DENSE
 
     -------------------------------------------------------------------------
@@ -3605,11 +3730,11 @@ RCODE
   SEGMENTS IN THE MODULE
   ======================
 NEAR_CODE
-  Relative segment, address: CODE 00003096 - 000030EE (0x59 bytes), align: 0
+  Relative segment, address: CODE 0000324D - 000032A5 (0x59 bytes), align: 0
   Segment part 6.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           memcmp                  00003096        ?Subroutine0 (nwk_QMgmt)
+           memcmp                  0000324D        ?Subroutine0 (nwk_QMgmt)
                                                    Segment part 21 (nwk)
                                                    Segment part 50 (nwk_frame)
                                                    dispatchFrame (nwk_frame)
@@ -3617,6 +3742,7 @@ NEAR_CODE
                                                    nwk_isSandFClient (nwk_join)
                                                    nwk_isValidReply (nwk)
                                                    nwk_processMgmt (nwk_mgmt)
+                                                   uart_decode_cmd_callback (uart_app)
                XSTACK = 00000002 ( 00000008 )
 
     -------------------------------------------------------------------------
@@ -3625,11 +3751,11 @@ NEAR_CODE
   SEGMENTS IN THE MODULE
   ======================
 NEAR_CODE
-  Relative segment, address: CODE 000030EF - 00003136 (0x48 bytes), align: 0
+  Relative segment, address: CODE 000032A6 - 000032ED (0x48 bytes), align: 0
   Segment part 6.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           memcpy                  000030EF        ?Subroutine12 (nwk_frame)
+           memcpy                  000032A6        ?Subroutine12 (nwk_frame)
                                                    SMPL_SendOpt (nwk_api)
                                                    Segment part 36 (nwk_frame)
                                                    Segment part 39 (nwk_link)
@@ -3639,6 +3765,7 @@ NEAR_CODE
                                                    nwk_processPing (nwk_ping)
                                                    nwk_saveJoinedDevice (nwk)
                                                    smpl_send_join_reply (nwk_join)
+                                                   uart_decode_cmd_callback (uart_app)
                XSTACK = 00000002 ( 00000009 )
                ISTACK = 00000000 ( 00000001 )
 
@@ -3648,18 +3775,18 @@ NEAR_CODE
   SEGMENTS IN THE MODULE
   ======================
 NEAR_CODE
-  Relative segment, address: CODE 00003137 - 000031C4 (0x8e bytes), align: 0
+  Relative segment, address: CODE 000032EE - 0000337B (0x8e bytes), align: 0
   Segment part 6.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           memmove                 00003137        MRFI_RfIsr (mrfi)
+           memmove                 000032EE        MRFI_RfIsr (mrfi)
                                                    nwk_getNumObjectFromMsg (nwk)
                                                    nwk_putNumObjectIntoMsg (nwk)
                XSTACK = 00000002 ( 00000009 )
                ISTACK = 00000000 ( 00000001 )
     -------------------------------------------------------------------------
 NEAR_CODE
-  Relative segment, address: CODE 000031C5 - 000031D5 (0x11 bytes), align: 0
+  Relative segment, address: CODE 0000337C - 0000338C (0x11 bytes), align: 0
   Segment part 7.             Intra module refs:   memmove
 
     -------------------------------------------------------------------------
@@ -3668,11 +3795,12 @@ NEAR_CODE
   SEGMENTS IN THE MODULE
   ======================
 NEAR_CODE
-  Relative segment, address: CODE 000031D6 - 00003204 (0x2f bytes), align: 0
+  Relative segment, address: CODE 0000338D - 000033BB (0x2f bytes), align: 0
   Segment part 6.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           memset                  000031D6        ?Subroutine4 (mrfi)
+           memset                  0000338D        ?Subroutine4 (mrfi)
+                                                   main (main_AP_Async_Listen_autoack)
                                                    nwk_QInit (nwk_QMgmt)
                                                    nwk_allocateLocalRxPort (nwk)
                                                    nwk_globalsInit (nwk_globals)
@@ -3714,12 +3842,12 @@ PDATA_ID             CODE               000000E5                     dse    0
 IXDATA_ID            CODE               000000E5                     dse    0
 BDATA_ID             CODE               000000E5                     dse    0
 IDATA_ID             CODE               000000E5                     dse    0
-XDATA_ID             CODE          000000E5 - 00000191          AD   rel    0
-RCODE                CODE          00000192 - 000004AD         31C   rel    0
-DIFUNCT              CODE               000004AE                     dse    0
-CODE_C               CODE               000004AE                     dse    0
-CODE_N               CODE               000004AE                     dse    0
-NEAR_CODE            CODE          000004AE - 00003204        2D57   rel    0
+XDATA_ID             CODE          000000E5 - 000001DC          F8   rel    0
+RCODE                CODE          000001DD - 000004F8         31C   rel    0
+DIFUNCT              CODE               000004F9                     dse    0
+CODE_C               CODE               000004F9                     dse    0
+CODE_N               CODE               000004F9                     dse    0
+NEAR_CODE            CODE          000004F9 - 000033BB        2EC3   rel    0
 REGISTERS            DATA          00000000 - 00000007           8   rel    0
 VREG                 DATA          00000008 - 0000000F           8   rel    0
 PSP                  DATA               00000010                     dse    0
@@ -3747,8 +3875,8 @@ SFR_AN               DATA          00000086 - 00000086           1   rel    0
                      DATA          000000F8 - 000000FC           5 
                      DATA          000000FE - 000000FE           1 
 XSTACK               XDATA         0000F000 - 0000F3FE         3FF   rel    0
-XDATA_Z              XDATA         0000F3FF - 0000F6E8         2EA   rel    0
-XDATA_I              XDATA         0000F6E9 - 0000F795          AD   rel    0
+XDATA_Z              XDATA         0000F3FF - 0000F6BB         2BD   rel    0
+XDATA_I              XDATA         0000F6BC - 0000F7B3          F8   rel    0
 ISTACK               IDATA         00000040 - 000000FF          C0   rel    0
 
                 ****************************************
@@ -3757,9 +3885,9 @@ ISTACK               IDATA         00000040 - 000000FF          C0   rel    0
                 *                                      *
                 ****************************************
 
- 12 805 bytes of CODE  memory
+ 13 244 bytes of CODE  memory
      18 bytes of DATA  memory (+ 33 absolute )
-  1 942 bytes of XDATA memory
+  1 972 bytes of XDATA memory
     192 bytes of IDATA memory
       8 bits  of BIT   memory
 

@@ -25,7 +25,7 @@
     <Windows>
       
       
-    <Wnd2>
+    <Wnd0>
         <Tabs>
           <Tab>
             <Identity>TabID-8662-31629</Identity>
@@ -37,7 +37,7 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
         <Tabs>
           <Tab>
             <Identity>TabID-12301-2068</Identity>
@@ -47,20 +47,20 @@
           </Tab>
         <Tab><Identity>TabID-12181-27554</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-9109-10604</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart_app.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>175</SelStart><SelEnd>190</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\components\common\hal_types.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1808</SelStart><SelEnd>1808</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\Components\bsp\bsp.h</Filename><XPos>0</XPos><YPos>59</YPos><SelStart>3827</SelStart><SelEnd>3827</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\rfsimpliciti.c</Filename><XPos>0</XPos><YPos>16</YPos><SelStart>1572</SelStart><SelEnd>1572</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart.c</Filename><XPos>0</XPos><YPos>218</YPos><SelStart>10143</SelStart><SelEnd>10143</SelEnd></Tab><ActiveTab>4</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\components\common\hal_defs.h</Filename><XPos>0</XPos><YPos>160</YPos><SelStart>813</SelStart><SelEnd>813</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Archivos de programa\IAR Systems\Embedded Workbench 5.4\8051\INC\ioCC1110.h</Filename><XPos>0</XPos><YPos>227</YPos><SelStart>16316</SelStart><SelEnd>16316</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart.h</Filename><XPos>0</XPos><YPos>14</YPos><SelStart>1127</SelStart><SelEnd>1138</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart_app.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>286</SelStart><SelEnd>286</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</Filename><XPos>0</XPos><YPos>323</YPos><SelStart>9837</SelStart><SelEnd>9837</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\components\common\hal_types.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1808</SelStart><SelEnd>1808</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\Components\bsp\bsp.h</Filename><XPos>0</XPos><YPos>59</YPos><SelStart>3827</SelStart><SelEnd>3827</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\rfsimpliciti.c</Filename><XPos>0</XPos><YPos>4</YPos><SelStart>557</SelStart><SelEnd>1054</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\components\common\hal_defs.h</Filename><XPos>0</XPos><YPos>18</YPos><SelStart>681</SelStart><SelEnd>681</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Archivos de programa\IAR Systems\Embedded Workbench 5.4\8051\INC\ioCC1110.h</Filename><XPos>0</XPos><YPos>227</YPos><SelStart>16316</SelStart><SelEnd>16316</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart.c</Filename><XPos>0</XPos><YPos>231</YPos><SelStart>10269</SelStart><SelEnd>10308</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart.h</Filename><XPos>0</XPos><YPos>17</YPos><SelStart>1048</SelStart><SelEnd>1048</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart_app.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>718</SelStart><SelEnd>733</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\main_AP_Async_Listen_autoack.c</Filename><XPos>0</XPos><YPos>245</YPos><SelStart>10001</SelStart><SelEnd>10001</SelEnd></Tab><ActiveTab>8</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Applications\uart_app.c</Filename><XPos>0</XPos><YPos>22</YPos><SelStart>1198</SelStart><SelEnd>1209</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-00b1b028><key>iaridepm.enu1</key></Toolbar-00b1b028></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>555</Bottom><Right>397</Right><x>-2</x><y>-2</y><xscreen>349</xscreen><yscreen>287</yscreen><sizeHorzCX>242361</sizeHorzCX><sizeHorzCY>348301</sizeHorzCY><sizeVertCX>277083</sizeVertCX><sizeVertCY>675971</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>225</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>227</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>275485</sizeHorzCY><sizeVertCX>242361</sizeVertCX><sizeVertCY>348301</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-00b1b028><key>iaridepm.enu1</key></Toolbar-00b1b028></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>555</Bottom><Right>397</Right><x>-2</x><y>-2</y><xscreen>349</xscreen><yscreen>287</yscreen><sizeHorzCX>242361</sizeHorzCX><sizeHorzCY>348301</sizeHorzCY><sizeVertCX>277083</sizeVertCX><sizeVertCY>675971</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>225</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>227</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>275485</sizeHorzCY><sizeVertCX>242361</sizeVertCX><sizeVertCY>348301</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

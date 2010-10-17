@@ -18,6 +18,8 @@
 #define UART_PORT_BITRATE_E (unsigned char) 12
 #endif
 
+extern unsigned char uartCommand[SIZE_OF_UART_RX_BUFFER];
+extern int uartCommandSize;
 
 extern void start_gps_at_uart(void);
-
+extern void uart_decode_cmd_callback(void);
